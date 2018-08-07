@@ -2030,3 +2030,6 @@
     box-shadow:0 0 0 0 #fff !important;
 
   }
+  .page-header .page-header-top .page-logo .logo-default {
+    margin: 0px 0 0 0 !important;
+}
