@@ -1,0 +1,15 @@
+.img-responsive{
+    display: inherit!important;
+}
+.login{
+    padding: 0px;
+    margin: 0px;
+    background: #fff !important;
+}
+
+/* .copyright{
+width: 100%;
+position: fixed;
+bottom: 0px;
+text-align: center;
+} */

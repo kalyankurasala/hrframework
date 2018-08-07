@@ -1,0 +1,9 @@
+.control-label {
+    margin-top: 6px;
+}
+.box{
+	border:1px solid #e1e1e1; 
+	box-shadow:2px 2px 2px 2px #eee;
+	height:100px;
+	
+}
