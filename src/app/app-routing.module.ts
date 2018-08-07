@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'forgot-pw', component: ForgotPasswordComponent },
-  {path:'admin',component:AdminLayoutComponent,loadChildren:'./admin/admin.module#AdminModule'},
+  {path:'admin',component:AdminLayoutComponent,loadChildren:'src/app/admin/admin.module#AdminModule'},
   { path: '**', component: LoginComponent }
 ];
 
@@ -20,7 +20,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules})
   ],
   exports: [RouterModule],
   declarations: []

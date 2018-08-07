@@ -39,6 +39,9 @@
               "src/assets/theme/assets/admin/layout3/css/layout.css",
               "src/assets/theme/assets/admin/layout3/css/themes/default.css",
               "src/assets/theme/assets/admin/layout3/css/custom.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/omega/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "src/styles.css"
             ],
             "scripts": [
