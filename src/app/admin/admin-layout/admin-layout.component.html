@@ -410,14 +410,13 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li class="" id="dashboard">
-						<a href="/HRRSFAC/admin/dashboard">Dashboard</a>
+						<a [routerLink]="['/admin/dashboard']">Dashboard</a>
 					</li>
-					<li class="menu-dropdown classic-menu-dropdown  active" id="recruitment">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="hover-initialized">
+					<li class="menu-dropdown classic-menu-dropdown" id="recruitment">
+						<a [routerLink]="['/admin/recruitment']" >
 							Recruitment
-							<i class="fa fa-angle-down"></i>
 						</a>
-						<ul class="dropdown-menu">
+						<!-- <ul class="dropdown-menu">
 							<li class="">
 								<a href="/HRRSFAC/admin/addjob">
 									<i class="icon-tag"></i>
@@ -428,14 +427,13 @@
 									<i class="icon-tag"></i>
 									Manage Jobs </a>
 							</li>
-						</ul>
+						</ul> -->
 					</li>
 					<li class="menu-dropdown mega-menu-dropdown mega-menu-full">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle hover-initialized">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" [routerLink]="['/admin/dashboard']" class="dropdown-toggle hover-initialized">
 							Self Expression
-							<i class="fa fa-angle-down"></i>
 						</a>
-						<ul class="dropdown-menu hide">
+						<!-- <ul class="dropdown-menu hide">
 							<li>
 								<div class="mega-menu-content">
 									<div class="row">
@@ -673,12 +671,11 @@
 									</div>
 								</div>
 							</li>
-						</ul>
+						</ul> -->
 					</li>
 					<li class="menu-dropdown classic-menu-dropdown">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="hover-initialized">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" [routerLink]="['/admin/dashboard']" class="hover-initialized">
 							Fitness
-							<i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu pull-left hide">
 							<li class=" dropdown-submenu">
@@ -835,9 +832,8 @@
 						</ul>
 					</li>
 					<li class="menu-dropdown mega-menu-dropdown mega-menu-full">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle hover-initialized">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" [routerLink]="['/admin/dashboard']" class="dropdown-toggle hover-initialized">
 							Pages
-							<i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu hide">
 							<li>
@@ -1078,7 +1074,7 @@
 						</ul>
 					</li>
 					<li class="menu-dropdown">
-						<a  target="_blank" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="AngularJS version demo">
+						<a [routerLink]="['/admin/dashboard']" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="AngularJS version demo">
 							Culture </a>
 					</li>
 				</ul>
