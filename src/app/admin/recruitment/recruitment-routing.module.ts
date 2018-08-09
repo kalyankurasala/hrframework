@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes, Router } from '@angular/router';
-import {RecruitmentAtsComponent} from './recruitment-ats/recruitment-ats.component';
+import { ManageApplicantsComponent } from './manage-applicants/manage-applicants.component';
+import { ManageJobsComponent } from './manage-jobs/manage-jobs.component';
 
 const routes: Routes = [
-  {path:'ats',component:RecruitmentAtsComponent}
+  { path: 'manage-applicants',component: ManageApplicantsComponent },
+  { path: 'manage-jobs',component: ManageJobsComponent },
+
 ];
 
 @NgModule({
@@ -13,7 +16,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  exports:[RouterModule],
+  exports: [RouterModule],
   declarations: []
 })
 export class RecruitmentRoutingModule { }
