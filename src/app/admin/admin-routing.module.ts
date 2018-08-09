@@ -9,7 +9,7 @@ import { RecruitmentAtsComponent } from './recruitment/recruitment-ats/recruitme
 const routes: Routes = [
   { path: 'dashboard', component: AdminDashboardComponent },
   { path: 'ats', component: RecruitmentAtsComponent },
-  { path: 'recruitment', component: RecruitmentLayoutComponent}
+  { path: 'recruitment', component: RecruitmentLayoutComponent,loadChildren:'./recruitment/recruitment.module#RecruitmentModule'}
 ];
 
 
