@@ -37,3 +37,40 @@ thead{
 .red{
     color: red;
 }
+
+
+/*Bread crumbs start */
+.header-new-main {
+    margin-top: 10px;
+    min-height: 50px;
+    background: #ddd;
+    padding: 9px 20px 8px 0px;
+}
+
+.header-icon-band {
+    background: #158AC9;
+    color: white;
+}
+
+.header-icon-band {
+    padding: 15px;
+    background: #ff8c00;
+    bottom: 0;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sub-header-new {
+    float: left;
+    margin-left: 60px;
+    margin-bottom: 9px;
+    margin-top: 9px;
+    font-family: wf_segoe-ui_normal, "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+/* Bread crumbs css end */
