@@ -1,3 +1,92 @@
-<p>
-  manage-jobs.!
-</p>
+<div class="row">
+<div class="col-lg-11">
+    <button class="btn btn-success" style="float: right;" (click)="AddUserModalfn(1)">
+        <i class="fa fa-plus"></i> Add User </button>
+</div>
+
+
+
+<div class="box-body table-responsive col-lg-11" style="margin-top: 20px;">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="col-lg-2"> Job</th>
+                <th class="col-lg-2"> Code </th>
+                <th class="col-lg-6"> Description </th>
+                <th class="col-lg-2"> Video JD</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let applicant of tableList">
+                <td >{{applicant.job}}</td>
+                <td>{{applicant.code}}</td>
+                <td>{{applicant.Description}}</td>
+                <td><a href="#" target="_blank"><i class="fa fa-edit">{{applicant.Video}}</i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" bsModal #addUserModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <b>Add User</b>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body row">
+                    <form [formGroup]="userEditForm" class="col-lg-12">
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="FirstName">First Name</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="FirstName" placeholder="First Name" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="Lastname">Last Name</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="Lastname" placeholder="Last Name" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="EmailID">Email ID</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="EmailID" placeholder="Email" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" (click)="AddUserModalfn(0)">Add</button>
+                <button type="button" class="btn btn-default" (click)="AddUserModalfn(0)">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

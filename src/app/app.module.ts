@@ -10,22 +10,17 @@ import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    ForgotPasswordComponent,
-    RegisterComponent,
-    AdminLayoutComponent
-  ],
+  declarations: [AppComponent,LoginComponent,ForgotPasswordComponent,RegisterComponent,AdminLayoutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ModalModule.forRoot(),
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
