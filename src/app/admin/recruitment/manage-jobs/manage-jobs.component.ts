@@ -1,21 +1,24 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
 import { FormGroup, FormBuilder,  FormControl } from '@angular/forms';
-import { ManagejobsApplicants } from '../manage-jobs/managejobs-applicants';
+import { ManagejobsApplicants } from './managejobs-applicants';
 
 @Component({
   selector: 'app-manage-jobs',
   templateUrl: './manage-jobs.component.html',
   styleUrls: ['./manage-jobs.component.css']
 })
+
+
+
 export class ManageJobsComponent implements OnInit {
 
 
   tableList:ManagejobsApplicants[]=[
-    { mjob: 'PHP', mcode: ' php1234', mDescription: 'This is Php', mVideoJD:  ' ' },
-    { mjob: '.NET', mcode: '.net2345', mDescription: 'This is .Net', mVideoJD:  ' ' },
-    { mjob: 'ANDROID', mcode: 'and4567', mDescription: 'This is Android', mVideoJD: ' ' },
-    { mjob: 'IOS', mcode: 'ios0987', mDescription: 'This is IOS', mVideoJD: ' ' }
+    { intid:1, vcJob: 'PHP', vcCode: ' php1234', vcDescription: 'This is Php', vcVideoJD:  ' ' },
+    { intid:2, vcJob: '.NET', vcCode: '.net2345', vcDescription: 'This is .Net', vcVideoJD:  ' ' },
+    { intid:3,vcJob: 'ANDROID', vcCode: 'and4567', vcDescription: 'This is Android', vcVideoJD: ' ' },
+    { intid:4,vcJob: 'IOS', vcCode: 'ios0987', vcDescription: 'This is IOS', vcVideoJD: ' ' }
   ];
 
   userEditForm: FormGroup;

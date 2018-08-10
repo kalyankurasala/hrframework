@@ -1,12 +1,15 @@
 <div class="row">
+    <!-- Add job button-->
     <div class="col-lg-11">
         <button class="btn btn-success pull-right" (click)="AddjobModalfn(1)">
             <i class="fa fa-plus"></i> Add </button>
     </div>
+    
+    <!-- Add job button End-->
 
-
-
-    <div class="box-body table-responsive col-lg-11" style="margin-top: 20px;">
+    
+    <!-- Table start-->
+<div class="box-body table-responsive col-lg-11" style="margin-top: 20px;">
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -20,12 +23,12 @@
             </thead>
             <tbody>
                 <tr *ngFor="let applicant of tableList">
-                    <td>{{applicant.mjob}}</td>
-                    <td>{{applicant.mcode}}</td>
-                    <td >{{applicant.mDescription}}</td>
+                    <td>{{applicant.vcJob}}</td>
+                    <td>{{applicant.vcCode}}</td>
+                    <td >{{applicant.vcDescription}}</td>
                     <td>
                         <a href="javascript:;" target="_blank">
-                            <i class="fa fa-link">{{applicant.mVideoJD}}</i>
+                            <i class="fa fa-link">{{applicant.vcVideoJD}}</i>
                         </a>
                     </td>
                     <td>
@@ -40,24 +43,11 @@
             </tbody>
         </table>
     </div>
-
+    <!-- Table end-->
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Job add edit modal start  -->
 <div class="modal fade" bsModal #addJobModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -112,7 +102,9 @@
     </div>
 </div>
 
+<!-- Job add edit modal End-->
 
+<!-- Job Delete modal start  -->
 <div class="modal fade" bsModal #deleteJobModal="bs-modal"  [config]="{backdrop: 'static'}" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -131,3 +123,5 @@
           </div>
         </div>
       </div>
+      
+<!-- Job Delete modal End-->

@@ -1,6 +1,7 @@
 export class ManagejobsApplicants {
-    mjob:string;
-    mcode:string;
-    mDescription: string;
-    mVideoJD: string;
-}
+    intid:Number;
+    vcJob:string;
+    vcCode:string;
+    vcDescription: string;
+    vcVideoJD: string;
+  }
