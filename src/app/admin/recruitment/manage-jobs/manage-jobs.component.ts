@@ -35,6 +35,10 @@ export class ManageJobsComponent implements OnInit {
     });
   }
   @ViewChild('addJobModal') public addJobModal: ModalDirective;
+  @ViewChild('deleteJobModal') public deleteJobModal: ModalDirective;
+
+
+
 
   AddjobModalfn(e) {
     if (e != 0) {
@@ -43,4 +47,14 @@ export class ManageJobsComponent implements OnInit {
       this.addJobModal.hide();
     }
   }
+
+
+  jobDeleteModal(e) {
+    if (e != 0) {
+      this.deleteJobModal.show();
+    } else {
+      this.deleteJobModal.hide();
+    }
+  }
+
 }

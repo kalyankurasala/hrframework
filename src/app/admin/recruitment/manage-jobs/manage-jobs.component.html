@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-11">
-        <button class="btn btn-success" style="float: right;" (click)="AddjobModalfn(1)">
-            <i class="fa fa-plus"></i> Add Job </button>
+        <button class="btn btn-success pull-right" (click)="AddjobModalfn(1)">
+            <i class="fa fa-plus"></i> Add </button>
     </div>
 
 
@@ -24,15 +24,15 @@
                     <td>{{applicant.mcode}}</td>
                     <td >{{applicant.mDescription}}</td>
                     <td>
-                        <a href="#" target="_blank">
+                        <a href="javascript:;" target="_blank">
                             <i class="fa fa-link">{{applicant.mVideoJD}}</i>
                         </a>
                     </td>
                     <td>
-                        <a >
+                        <a (click)="AddjobModalfn(1)">
                             <i class="fa fa-edit" ></i>
                         </a>
-                        <a >
+                        <a (click)="jobDeleteModal(1)">
                             <i class="fa fa-trash red" style="padding-left:8px;"></i>
                         </a>
                     </td>
@@ -63,7 +63,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    <b>Add User</b>
+                    <b>Job</b>
                 </h4>
             </div>
             <div class="modal-body">
@@ -105,9 +105,29 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" (click)="AddjobModalfn(0)">Add</button>
+                <button type="button" class="btn btn-success" (click)="AddjobModalfn(0)">Save</button>
                 <button type="button" class="btn btn-default" (click)="AddjobModalfn(0)">Close</button>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" bsModal #deleteJobModal="bs-modal"  [config]="{backdrop: 'static'}" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">
+                <b>Delete Job </b>
+              </h4>
+            </div>
+            <div class="modal-body">
+                <b>Are you sure you want to delete</b>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success" (click)="jobDeleteModal(0)" >Confirm</button>
+                <button type="button" class="btn btn-default" (click)="jobDeleteModal(0)">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
