@@ -1,5 +1,6 @@
 <div class="col-lg-11">
-<button class="btn btn-success"  style="float: right;" (click)="AddUserModalfn(1)"><i class="fa fa-plus"></i> Add User </button>
+    <button class="btn btn-success" style="float: right;" (click)="AddUserModalfn(1)">
+        <i class="fa fa-plus"></i> Add User </button>
 </div>
 
 <div class="modal fade" bsModal #addUserModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
@@ -18,7 +19,7 @@
                                 <label class="mt" for="FirstName">First Name</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="FirstName" placeholder="First Name"/>
+                                <input type="text" class="form-control" formControlName="FirstName" placeholder="First Name" />
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -26,7 +27,7 @@
                                 <label class="mt" for="Lastname">Last Name</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="Lastname" placeholder="Last Name"/>
+                                <input type="text" class="form-control" formControlName="Lastname" placeholder="Last Name" />
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -34,10 +35,10 @@
                                 <label class="mt" for="EmailID">Email ID</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="EmailID" placeholder="Email"/>
+                                <input type="text" class="form-control" formControlName="EmailID" placeholder="Email" />
                             </div>
                         </div>
-                      </form>
+                    </form>
                 </div>
             </div>
             <div class="modal-footer">
