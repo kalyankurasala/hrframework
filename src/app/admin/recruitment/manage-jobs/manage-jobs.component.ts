@@ -12,10 +12,10 @@ export class ManageJobsComponent implements OnInit {
 
 
   tableList:ManagejobsApplicants[]=[
-    { job: 'PHP', code: ' php1234', Description: 'This is Php', VideoJD:  ' ' },
-    { job: '.NET', code: '.net2345', Description: 'This is .Net', VideoJD:  ' ' },
-    { job: 'ANDROID', code: 'and4567', Description: 'This is Android', VideoJD: ' ' },
-    { job: 'IOS', code: 'ios0987', Description: 'This is IOS', VideoJD: ' ' }
+    { mjob: 'PHP', mcode: ' php1234', mDescription: 'This is Php', mVideoJD:  ' ' },
+    { mjob: '.NET', mcode: '.net2345', mDescription: 'This is .Net', mVideoJD:  ' ' },
+    { mjob: 'ANDROID', mcode: 'and4567', mDescription: 'This is Android', mVideoJD: ' ' },
+    { mjob: 'IOS', mcode: 'ios0987', mDescription: 'This is IOS', mVideoJD: ' ' }
   ];
 
   userEditForm: FormGroup;
@@ -28,18 +28,19 @@ export class ManageJobsComponent implements OnInit {
   }
   createEditForm() {
     this.userEditForm = this.fb.group({
-      FirstName: new FormControl,
-      Lastname: new FormControl,
-      EmailID: new FormControl
+      Job: new FormControl,
+      Code: new FormControl,
+      Description: new FormControl,
+      VideoJD: new FormControl
     });
   }
-  @ViewChild('addUserModal') public addUserModal: ModalDirective;
+  @ViewChild('addJobModal') public addJobModal: ModalDirective;
 
-  AddUserModalfn(e) {
+  AddjobModalfn(e) {
     if (e != 0) {
-      this.addUserModal.show();
+      this.addJobModal.show();
     } else {
-      this.addUserModal.hide();
+      this.addJobModal.hide();
     }
   }
 }
