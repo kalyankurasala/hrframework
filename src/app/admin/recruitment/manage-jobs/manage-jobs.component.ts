@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
 import { FormGroup, FormBuilder,  FormControl } from '@angular/forms';
+import { ManagejobsApplicants } from './managejobs-applicants';
 
 @Component({
   selector: 'app-manage-jobs',
@@ -8,13 +9,7 @@ import { FormGroup, FormBuilder,  FormControl } from '@angular/forms';
   styleUrls: ['./manage-jobs.component.css']
 })
 
-class ManagejobsApplicants {
-  intid:Number;
-  vcJob:string;
-  vcCode:string;
-  vcDescription: string;
-  vcVideoJD: string;
-}
+
 
 export class ManageJobsComponent implements OnInit {
 
