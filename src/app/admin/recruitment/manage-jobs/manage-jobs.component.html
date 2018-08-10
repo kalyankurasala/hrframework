@@ -1,34 +1,50 @@
 <div class="row">
-<div class="col-lg-11">
-    <button class="btn btn-success" style="float: right;" (click)="AddUserModalfn(1)">
-        <i class="fa fa-plus"></i> Add User </button>
+    <div class="col-lg-11">
+        <button class="btn btn-success" style="float: right;" (click)="AddjobModalfn(1)">
+            <i class="fa fa-plus"></i> Add Job </button>
+    </div>
+
+
+
+    <div class="box-body table-responsive col-lg-11" style="margin-top: 20px;">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="col-lg-2"> Job</th>
+                    <th class="col-lg-2"> Code </th>
+                    <th class="col-lg-5"> Description </th>
+                    <th class="col-lg-2"> Video JD</th>
+                    <th class="col-lg-1"> Actions </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let applicant of tableList">
+                    <td>{{applicant.mjob}}</td>
+                    <td>{{applicant.mcode}}</td>
+                    <td >{{applicant.mDescription}}</td>
+                    <td>
+                        <a href="#" target="_blank">
+                            <i class="fa fa-link">{{applicant.mVideoJD}}</i>
+                        </a>
+                    </td>
+                    <td>
+                        <a >
+                            <i class="fa fa-edit" ></i>
+                        </a>
+                        <a >
+                            <i class="fa fa-trash red" style="padding-left:8px;"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 
 
 
-<div class="box-body table-responsive col-lg-11" style="margin-top: 20px;">
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th class="col-lg-2"> Job</th>
-                <th class="col-lg-2"> Code </th>
-                <th class="col-lg-6"> Description </th>
-                <th class="col-lg-2"> Video JD</th>
-            </tr>
-
-        </thead>
-        <tbody>
-            <tr *ngFor="let applicant of tableList">
-                <td >{{applicant.job}}</td>
-                <td>{{applicant.code}}</td>
-                <td>{{applicant.Description}}</td>
-                <td><a href="#" target="_blank"><i class="fa fa-edit">{{applicant.Video}}</i></a></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-</div>
 
 
 
@@ -42,10 +58,7 @@
 
 
 
-
-
-
-<div class="modal fade" bsModal #addUserModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+<div class="modal fade" bsModal #addJobModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -58,34 +71,42 @@
                     <form [formGroup]="userEditForm" class="col-lg-12">
                         <div class="form-group col-lg-12">
                             <div class="col-lg-4">
-                                <label class="mt" for="FirstName">First Name</label>
+                                <label class="mt" for="Job">Job</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="FirstName" placeholder="First Name" />
+                                <input type="text" class="form-control" formControlName="Job" placeholder="Job" />
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
                             <div class="col-lg-4">
-                                <label class="mt" for="Lastname">Last Name</label>
+                                <label class="mt" for="Code">Code</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="Lastname" placeholder="Last Name" />
+                                <input type="text" class="form-control" formControlName="Code" placeholder="code" />
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
                             <div class="col-lg-4">
-                                <label class="mt" for="EmailID">Email ID</label>
+                                <label class="mt" for="Description">Description</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="EmailID" placeholder="Email" />
+                                <input type="text" class="form-control" formControlName="Description" placeholder="Description" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="VideoJD">Video JD </label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="VideoJD" placeholder="Video JD Link" />
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" (click)="AddUserModalfn(0)">Add</button>
-                <button type="button" class="btn btn-default" (click)="AddUserModalfn(0)">Close</button>
+                <button type="button" class="btn btn-success" (click)="AddjobModalfn(0)">Add</button>
+                <button type="button" class="btn btn-default" (click)="AddjobModalfn(0)">Close</button>
             </div>
         </div>
     </div>
