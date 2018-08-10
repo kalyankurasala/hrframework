@@ -7,13 +7,13 @@
 
             <div class="col-md-3">
                 <ul class="ver-inline-menu tabbable margin-bottom-10">
-                    <li class="">
+                    <li [routerLinkActive]="['active']">
                         <a [routerLink]="['manage-applicants']">
                             <i class="fa fa-plus"></i> Manage Applicants </a>
                         <span class="after">
                         </span>
                     </li>
-                    <li>
+                    <li [routerLinkActive]="['active']">
                         <a [routerLink]="['manage-jobs']">
                             <i class="fa fa-plus"></i> Manage Jobs </a>
                     </li>
