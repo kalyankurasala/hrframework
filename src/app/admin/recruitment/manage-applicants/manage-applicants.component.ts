@@ -8,25 +8,29 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./manage-applicants.component.css']
 })
 
+
+
 export class ManageApplicantsComponent implements OnInit {
   @ViewChild('addApplicantModal') public addApplicantModal: ModalDirective;
   @ViewChild('deleteApplicantModal') public deleteApplicantModal: ModalDirective;
-  
+
   applicantAddEditForm: FormGroup;
   constructor(private fb: FormBuilder) {
     this.fnApplicantAddEditForm();
+
   }
 
-  fnApplicantAddEditForm(){
+  fnApplicantAddEditForm() {
+
     this.applicantAddEditForm = this.fb.group({
       vcName: new FormControl,
       vcPhone: new FormControl,
       vcExperience: new FormControl,
       vcCategory: new FormControl,
       vcJobType: new FormControl,
-      vcResumePath : new FormControl,
+      vcResumePath: new FormControl,
       dtUpdated: new FormControl
-    }); 
+    });
   }
 
   tableList: Object[] = [
@@ -46,7 +50,7 @@ export class ManageApplicantsComponent implements OnInit {
       this.addApplicantModal.hide();
     }
   }
-  fnApplicantDeleteModal(flag){
+  fnApplicantDeleteModal(flag) {
     if (flag == 1) {
       this.deleteApplicantModal.show();
     }

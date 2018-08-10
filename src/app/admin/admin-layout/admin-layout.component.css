@@ -682,7 +682,7 @@
       border-bottom: 0;
     }
     .page-header .page-header-menu .hor-menu .navbar-nav > li > a {
-      background: none !important;
+      /* background: none !important; */
       color: #666 !important;
     }
     .page-header .page-header-menu .hor-menu .navbar-nav > li > a > i {
@@ -1312,9 +1312,7 @@
     font-weight: normal;
     padding: 16px 18px 15px 18px;
   }
-  .page-header .page-header-menu .hor-menu .navbar-nav > li > a:focus {
-    background: none !important;
-  }
+
   .page-header .page-header-menu .hor-menu .navbar-nav > li.current .selected, .page-header .page-header-menu .hor-menu .navbar-nav > li.active .selected {
     left: 50%;
     bottom: 0;

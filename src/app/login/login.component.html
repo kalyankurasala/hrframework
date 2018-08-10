@@ -34,7 +34,7 @@
             formControlName="password" name="password" />
         </div>
         <div class="form-actions">
-          <a [routerLink]="['/admin/dashboard']" (click)="onSubmit(loginForm.value)" class="btn btn-success uppercase">Login</a>
+          <a [routerLink]="['/admin/recruitment/manage-applicants']" (click)="onSubmit(loginForm.value)" class="btn btn-success uppercase">Login</a>
           <label class="rememberme check">
             <input type="checkbox" name="remember" value="1" />Remember </label>
           <a [routerLink]="['/forgot-pw']" id="forget-password" class="forget-password">Forgot Password?</a>
