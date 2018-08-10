@@ -157,7 +157,9 @@
 
         <div class="row mar-btm-10">
             <div class="col-sm-12">
-                <button class="btn btn-success pull-right">Add Applicant</button>
+                <button class="btn btn-success pull-right" (click)="fnAddApplicantModal(1)">
+                    <i class="fa fa-plus"></i> Add Applicant
+                </button>
             </div>
         </div>
 
@@ -173,10 +175,7 @@
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr class="tr-grid-header">
-                                        <th>
-                                            <input type="checkbox">
-                                        </th>
-                                        <th>Consultant</th>
+                                        <th>Applicant</th>
                                         <th>Phone</th>
                                         <th style="text-align: center">Experience</th>
                                         <th>Category</th>
@@ -189,15 +188,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-                                        <td>Mitchel Johnson</td>
-                                        <td>9492913218</td>
-                                        <td>3.5 years</td>
-                                        <td>Transportation</td>
-                                        <td>Permanent</td>
+                                    <tr *ngFor="let applicant of tableList">
+                                        <td>{{applicant.vcName}}</td>
+                                        <td>{{applicant.vcPhone}}</td>
+                                        <td>{{applicant.vcExperience}}</td>
+                                        <td>{{applicant.vcCategory}}</td>
+                                        <td>{{applicant.vcJobType}}</td>
                                         <td style="text-align: center">
                                             <a [routerLink]="['/admin/ats']" target="_blank">
                                                 <i class="fa fa-external-link-square"></i>
@@ -216,153 +212,15 @@
                                             <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
                                                 <i class="fa fa-envelope"></i>
                                             </a>
-                                            <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;">
+                                            <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;" (click)="fnAddApplicantModal(1)">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-times red"></i>
+                                            <a (click)="fnApplicantDeleteModal(1)">
+                                                <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-trash red"></i>
+                                            </a>
                                         </td>
 
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-                                        <td>Kevin Peterson</td>
-                                        <td>9494955785</td>
-                                        <td>2.6 years</td>
-                                        <td>Logistics</td>
-                                        <td>Permanent</td>
-                                        <td style="text-align: center">
-                                            <a [routerLink]="['/admin/ats']" target="_blank">
-                                                <i class="fa fa-external-link-square"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">03-04-2018</td>
-                                        <td style="text-align: center">
-                                            <a data-toggle="modal" style="cursor: pointer;" data-target="#myProfile">View</a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a href="http://edj.optionmatrix.org/images/applicant_resume/8264886-24437043-abcd.doc">
-                                                <i class="glyphicon glyphicon-file"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
-                                                <i class="fa fa-envelope"></i>
-                                            </a>
-                                            <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;">
-                                                <i class="fa fa-edit"></i>
-                                            </a>
-                                            <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-times red"></i>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-                                        <td>Adam Gilchrist</td>
-                                        <td>8546252202</td>
-                                        <td>3.5 years</td>
-                                        <td>Finance</td>
-                                        <td>Contract</td>
-                                        <td style="text-align: center">
-                                            <a [routerLink]="['/admin/ats']" target="_blank">
-                                                <i class="fa fa-external-link-square"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">24-12-2017</td>
-                                        <td style="text-align: center">
-                                            <a data-toggle="modal" style="cursor: pointer;" data-target="#myProfile">View</a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a href="http://edj.optionmatrix.org/images/applicant_resume/8264886-24437043-abcd.doc">
-                                                <i class="glyphicon glyphicon-file"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
-                                                <i class="fa fa-envelope"></i>
-                                            </a>
-                                            <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;">
-                                                <i class="fa fa-edit"></i>
-                                            </a>
-                                            <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-times red"></i>
-                                        </td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-                                        <td>Mitchel Johnson</td>
-                                        <td>9492913218</td>
-                                        <td>3.5 years</td>
-                                        <td>Transportation</td>
-                                        <td>Permanent</td>
-                                        <td style="text-align: center">
-                                            <a [routerLink]="['/admin/ats']" target="_blank">
-                                                <i class="fa fa-external-link-square"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">02-07-2016</td>
-                                        <td style="text-align: center">
-                                            <a style="cursor: pointer;" data-toggle="modal" data-target="#myProfile">View</a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a href="http://edj.optionmatrix.org/images/applicant_resume/8264886-24437043-abcd.doc">
-                                                <i class="glyphicon glyphicon-file"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
-                                                <i class="fa fa-envelope"></i>
-                                            </a>
-                                            <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;">
-                                                <i class="fa fa-edit"></i>
-                                            </a>
-                                            <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-times red"></i>
-                                        </td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox">
-                                        </td>
-                                        <td>Ricky Ponting</td>
-                                        <td>8125154468</td>
-                                        <td>1.6 years</td>
-                                        <td>Accounts</td>
-                                        <td>Contract</td>
-                                        <td style="text-align: center">
-                                            <a [routerLink]="['/admin/ats']" target="_blank">
-                                                <i class="fa fa-external-link-square"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">24-05-2018</td>
-                                        <td style="text-align: center">
-                                            <a style="cursor: pointer;" data-toggle="modal" data-target="#myProfile">View</a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a href="http://edj.optionmatrix.org/images/applicant_resume/8264886-24437043-abcd.doc">
-                                                <i class="glyphicon glyphicon-file"></i>
-                                            </a>
-                                        </td>
-                                        <td style="text-align: center">
-                                            <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
-                                                <i class="fa fa-envelope"></i>
-                                            </a>
-                                            <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;">
-                                                <i class="fa fa-edit"></i>
-                                            </a>
-                                            <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-times red"></i>
-                                        </td>
-
-                                    </tr>
-
-
                                 </tbody>
                             </table>
                         </div>
@@ -386,3 +244,107 @@
 
     </div>
 </div>
+
+
+
+<!--APPLICANT MODAL START-->
+<div class="modal fade" bsModal #addApplicantModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <b>Applicant</b>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body row">
+                    <form [formGroup]="applicantAddEditForm" class="col-lg-12">
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="vcName">Applicant</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="vcName" placeholder="Applicant Name" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="vcPhone">Phone</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="vcPhone" placeholder="Phone" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="vcExperience">Experience</label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="vcExperience" placeholder="Experience (Years)" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="vcCategory">Category </label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="vcCategory" placeholder="Category" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="vcJobType">Job Type </label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="vcJobType" placeholder="Job Type" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="dtUpdated">Updated </label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" formControlName="dtUpdated" placeholder="Updated" />
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <div class="col-lg-4">
+                                <label class="mt" for="vcResumePath">Resume </label>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="file" class="form-control" formControlName="vcResumePath" placeholder="Resume" />
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" (click)="fnAddApplicantModal(0)">Save</button>
+                <button type="button" class="btn btn-default" (click)="fnAddApplicantModal(0)">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--APPLICANT MODAL END-->
+<!--DELETE MODAL START-->
+<div class="modal fade" bsModal #deleteApplicantModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <b>Delete Applicant </b>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success" (click)="fnApplicantDeleteModal(0)">Confirm</button>
+                <button type="button" class="btn btn-default" (click)="fnApplicantDeleteModal(0)">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--DELETE MODAL END-->
