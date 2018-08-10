@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
 import { FormGroup, FormBuilder,  FormControl } from '@angular/forms';
+import { ManagejobsApplicants } from '../manage-jobs/managejobs-applicants';
 
 @Component({
   selector: 'app-manage-jobs',
@@ -8,8 +9,15 @@ import { FormGroup, FormBuilder,  FormControl } from '@angular/forms';
   styleUrls: ['./manage-jobs.component.css']
 })
 export class ManageJobsComponent implements OnInit {
-  
-  
+
+
+  tableList:ManagejobsApplicants[]=[
+    { job: 'PHP', code: ' php1234', Description: 'This is Php', VideoJD:  ' ' },
+    { job: '.NET', code: '.net2345', Description: 'This is .Net', VideoJD:  ' ' },
+    { job: 'ANDROID', code: 'and4567', Description: 'This is Android', VideoJD: ' ' },
+    { job: 'IOS', code: 'ios0987', Description: 'This is IOS', VideoJD: ' ' }
+  ];
+
   userEditForm: FormGroup;
 
 
