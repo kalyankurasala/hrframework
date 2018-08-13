@@ -33,14 +33,11 @@
               "src/assets/theme/assets/admin/pages/css/tasks.css",
               "src/assets/theme/assets/global/css/components-rounded.css",
               "src/assets/theme/assets/global/css/plugins.css",
-              "src/assets/theme/assets/admin/layout/css/layout.css",
-              "src/assets/theme/assets/admin/layout/css/custom.css",
-              "src/assets/theme/assets/admin/layout3/css/layout.css",
-              "src/assets/theme/assets/admin/layout3/css/themes/default.css",
               "src/assets/theme/assets/admin/layout3/css/custom.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/omega/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
+              "src/assets/theme/assets/admin/layout3/css/themes/default.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -54,8 +51,6 @@
               "src/assets/theme/assets/global/plugins/bootstrap-toastr/toastr.min.js",
               "src/assets/theme/assets/admin/layout/scripts/demo.js",
               "src/assets/theme/assets/admin/pages/scripts/login.js",
-              "src/assets/theme/assets/admin/layout/scripts/layout.js",
-              "src/assets/theme/assets/admin/layout3/scripts/layout.js",
               "src/assets/theme/assets/admin/layout3/scripts/demo.js",
               "src/assets/theme/assets/admin/pages/scripts/index3.js",
               "src/assets/theme/assets/global/scripts/metronic.js"

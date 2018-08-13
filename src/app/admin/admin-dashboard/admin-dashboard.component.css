@@ -1,0 +1,152 @@
+.card .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 25px 20px;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.widget-statstic-card {
+    position: relative;
+    overflow: hidden;
+}
+.card {
+    border-radius: 5px;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    margin-bottom: 30px;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card .card-header .card-header-left {
+    display: inline-block;
+}
+
+.text-c-blue {
+    color: #4680ff;
+}
+
+.m-b-0 {
+    margin-bottom: 0px;
+}
+.p-t-10 {
+    padding-top: 10px !important;
+}
+p {
+    font-size: 13px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+
+.card .card-header + .card-block, .card .card-header + .card-block-big {
+    padding-top: 0;
+}
+.card-block {
+    padding: 1.25rem;
+}
+.bg-c-yellow {
+    background-color: #FFB64D;
+}
+.text-c-pink {
+    color: #FC6180;
+}
+.bg-c-pink {
+    background-color: #FC6180;
+}
+
+.text-c-yellow {
+    color: #FFB64D;
+}
+.widget-statstic-card .st-icon {
+    color: #fff;
+    font-size: 20px;
+    padding: 40px 40px 20px 20px;
+    border-radius: 48%;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.widget-statstic-card i {
+    color: #ccc;
+}
+.bg-c-blue {
+    background-color: #4680ff;
+}
+.icofont {
+    font-family: IcoFont!important;
+    speak-as: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+user agent stylesheet
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+
+.text-left {
+    text-align: left!important;
+}
+
+.d-inline-block {
+    display: inline-block!important;
+}
+
+.icofont {
+    font-family: IcoFont!important;
+    speak-as: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.f-30 {
+    font-size: 30px;
+}
+
+.widget-statstic-card i {
+    color: #ccc;
+}
+
+.widget-statstic-card span {
+    border-radius: 30px;
+    background-color: #c6d8ff;
+    padding: 5px 20px;
+    color: #4680ff;
+    font-weight: 600;
+}
+
+
+.f-right {
+    float: right;
+}

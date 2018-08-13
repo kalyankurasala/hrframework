@@ -1,3 +1,79 @@
-<p style="color: aliceblue">
+<div class="col-lg-12">
+    <!-- Bread crumb-->
+    <div class="col-lg-12">
+        <div class="col-lg-12 margin-bottom-20 header-new-main">
+            <span class="header-icon-band">
+                <i class="fa fa-file-text-o icon-band"></i>
+            </span>
+            <p class="sub-header-new">This page Indicates the overall Statistics of the Company.</p>
+        </div>
+    </div>
+    <!--End f bread crumb -->
 
-</p>
+    <!-- panel of dash board start-->
+    <div class="col-md-4 col-xl-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>Statistics</h5>
+                    <p class="p-t-10 m-b-0 text-c-blue">Compared to last week</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="fa fa-line-chart st-icon bg-c-blue">
+                </i>
+
+
+                <div class="text-left">
+                    <h3 class="d-inline-block">5,456</h3>
+                    <i class="fa fa-arrow-up fa-2x text-c-green"></i>
+                    <span class="f-right">23%</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>Unique visitor</h5>
+                    <p class="p-t-10 m-b-0 text-c-pink">55% from last 28 hours</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="fa fa-users st-icon bg-c-pink">
+                </i>
+
+
+                <div class="text-left">
+                    <h3 class="d-inline-block">3,874</h3>
+                    <i class="fa fa-arrow-down fa-2x text-c-pink"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>New orders</h5>
+                    <p class="p-t-10 m-b-0 text-c-yellow">54% From last month</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="fa fa-users st-icon bg-c-yellow">
+                </i>
+                <div class="text-left">
+                    <h3 class="d-inline-block">5,456</h3>
+                    <i class="fa fa-arrow-up fa-2x text-c-yellow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- panel of dash board end-->
+
+    <div [chart]="chart" class="col-lg-12"></div>
+</div>

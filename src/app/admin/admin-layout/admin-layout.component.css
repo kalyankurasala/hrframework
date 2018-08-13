@@ -105,51 +105,7 @@
 }
 
 
-
-
-
-
-
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2030,3 +1986,72 @@
   .page-header .page-header-top .page-logo .logo-default {
     margin: 0 0 0 0 !important;
 }
+
+
+
+
+
+/*page header .. dashboard styles */
+/* .page-header .page-header-menu {
+  background: #ffffff !important;
+}
+.header .page-header-menu .hor-menu .navbar-nav > li > a {
+  color:  black !important;
+  background: #ffffff !important;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li > a {
+  color: #484848 !important;
+}
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li > a {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 10px 30px 5px 30px !important;
+}
+
+.header .page-header-menu .hor-menu .navbar-nav > li > a:hover {
+  color: #4680ff!important;
+  background: #ffffff !important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background: #ffffff !important;
+}
+.page-header .page-header-menu .hor-menu .navbar-nav > li.active > a,
+.page-header .page-header-menu .hor-menu .navbar-nav > li.active > a:hover,
+.page-header .page-header-menu .hor-menu .navbar-nav > li.current > a,
+.page-header .page-header-menu .hor-menu .navbar-nav > li.current > a:hover {
+  color:#4680ff!important;
+  background: #ffffff !important;
+  border-bottom: 4px solid #0073aa !important;
+}
+
+.page-header.page-header-menu .hor-menu .navbar-nav> li.open> a, 
+.page-header.page-header-menu .hor-menu .navbar-nav> li> a:hover {
+  color: #4680ff!important;
+  background: #ffffff !important;
+}
+
+
+.header .page-header-menu .hor-menu .navbar-nav > li > a:hover {
+  color:#4680ff!important;
+  background: #ffffff !important;
+}
+.page-header .page-header-menu .hor-menu .navbar-nav > li.open > a, 
+.page-header .page-header-menu .hor-menu .navbar-nav > li > a:hover {
+  color:#4680ff!important;
+  background: #ffffff !important;
+}
+
+
+.page-header .page-header-menu .hor-menu .navbar-nav > li.open > a,
+.page-header .page-header-menu .hor-menu .navbar-nav > li > a:hover {
+  color: #4680ff!important;
+  background: #ffffff !important;
+  border-bottom:4px solid #5ab3de !important;
+  transition: all 0.1s ease-in-out;
+} */
+
+/* end of  custom css for dashboard */

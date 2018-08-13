@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap';
+import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
   declarations: [AppComponent,LoginComponent,ForgotPasswordComponent,RegisterComponent,AdminLayoutComponent],
@@ -21,6 +22,7 @@ import { ModalModule } from 'ngx-bootstrap';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
+    ChartModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
-<div class="page-header">
+<div class="page-header col-lg-12">
 	<!-- BEGIN HEADER TOP -->
-	<div class="page-header-top">
-		<div class="container">
+	<div class="page-header-top col-lg-12">
+		<div class="container-fluid">
 			<!-- BEGIN LOGO -->
 			<div class="page-logo">
 				<a href="javascript:;">
@@ -65,11 +65,11 @@
 	<!-- END HEADER TOP -->
 	<!-- BEGIN HEADER MENU -->
 	<div class="page-header-menu" style="display: block;">
-		<div class="container">
+		<div class="container-fluid">
 			<!-- BEGIN MEGA MENU -->
 			<!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
 			<!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
-			<div class="hor-menu">
+			<div class="hor-menu col-lg-12">
 				<ul class="nav navbar-nav">
 					<li [routerLinkActive]="['active']" >
 						<a [routerLink]="['/admin/dashboard']">Dashboard</a>
@@ -91,8 +91,8 @@
 							</li>
 						</ul> -->
 					</li>
-					<li class="menu-dropdown mega-menu-dropdown mega-menu-full">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" [routerLink]="['/admin/dashboard']" class="dropdown-toggle hover-initialized">
+					<li [routerLinkActive]="['active']" >
+						<a [routerLink]="['/admin/alignment']" >
 							Alignment
 						</a>
 						<!-- <ul class="dropdown-menu hide">
@@ -335,11 +335,11 @@
 							</li>
 						</ul> -->
 					</li>
-					<li class="menu-dropdown mega-menu-dropdown mega-menu-full">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" [routerLink]="['/admin/dashboard']" class="dropdown-toggle hover-initialized">
+					<li [routerLinkActive]="['active']" >
+						<a [routerLink]="['/admin/alumini']" >
 							Alumini
 						</a>
-						<ul class="dropdown-menu hide">
+						<!-- <ul class="dropdown-menu hide">
 							<li>
 								<div class="mega-menu-content">
 									<div class="row">
@@ -575,10 +575,10 @@
 									</div>
 								</div>
 							</li>
-						</ul>
+						</ul> -->
 					</li>
-					<li class="menu-dropdown">
-						<a [routerLink]="['/admin/dashboard']" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="AngularJS version demo">
+					<li [routerLinkActive]="['active']">
+						<a [routerLink]="['/admin/culture']">
 							Culture </a>
 					</li>
 				</ul>
@@ -588,6 +588,6 @@
 	</div>
 	<!-- END HEADER MENU -->
 </div>
-<div>
+<div class="col-lg-12">
 	<router-outlet></router-outlet>
 </div>
