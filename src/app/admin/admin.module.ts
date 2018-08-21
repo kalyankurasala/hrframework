@@ -9,14 +9,17 @@ import { AlignmentLayoutComponent } from './alignment/alignment-layout/alignment
 import { AluminiLayoutComponent } from './alumini/alumini-layout/alumini-layout.component';
 import { CultureComponent } from './culture/culture/culture.component';
 import { ChartModule } from 'angular-highcharts';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { TabsModule } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
     StepsModule,
-    ChartModule
+    ChartModule,
+    TabsModule
   ],
-  declarations: [AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent, AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent]
+  declarations: [AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent, AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent]
 })
 export class AdminModule { }

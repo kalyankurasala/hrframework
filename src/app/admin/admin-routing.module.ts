@@ -8,6 +8,7 @@ import { RecruitmentAtsComponent } from './recruitment/recruitment-ats/recruitme
 import { AlignmentLayoutComponent } from './alignment/alignment-layout/alignment-layout.component';
 import { AluminiLayoutComponent } from './alumini/alumini-layout/alumini-layout.component';
 import { CultureComponent } from './culture/culture/culture.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: AdminDashboardComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'recruitment', component: RecruitmentLayoutComponent,loadChildren:'./recruitment/recruitment.module#RecruitmentModule'},
   { path: 'alignment', component: AlignmentLayoutComponent},
   { path: 'alumini', component: AluminiLayoutComponent},
-  { path: 'culture', component: CultureComponent}
+  { path: 'culture', component: CultureComponent},
+  { path: 'user-profile', component: UserProfileComponent}
 ];
 
 @NgModule({

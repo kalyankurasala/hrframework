@@ -22,6 +22,7 @@
     "@angular/router": "^6.0.2",
     "angular-highcharts": "^6.2.6",
     "angular-vertical-timeline": "^0.6.0",
+    "angular2-datatable": "^0.6.0",
     "core-js": "^2.5.4",
     "highcharts": "^6.1.1",
     "ngx-bootstrap": "^3.0.1",

@@ -10,8 +10,9 @@ import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ModalModule } from 'ngx-bootstrap';
+import { ModalModule, TabsModule  } from 'ngx-bootstrap';
 import { ChartModule } from 'angular-highcharts';
+
 
 @NgModule({
   declarations: [AppComponent,LoginComponent,ForgotPasswordComponent,RegisterComponent,AdminLayoutComponent],
@@ -22,7 +23,8 @@ import { ChartModule } from 'angular-highcharts';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-    ChartModule
+    ChartModule,
+    TabsModule.forRoot()
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
