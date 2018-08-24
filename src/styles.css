@@ -1,4 +1,18 @@
 @import "~angular-vertical-timeline/dist/vertical-timeline.css";
+
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
 /* testoing 1 1 1 1 1 1 */
 .login .logo {
     margin: 0 auto;
@@ -67,3 +81,6 @@ thead{
 }
 
 /* Bread crumbs css end */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }

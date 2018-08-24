@@ -24,19 +24,29 @@
         </div>
         <div class="form-group">
           <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-          <label class="control-label visible-ie8 visible-ie9">Username</label>
+          <!-- <label class="control-label visible-ie8 visible-ie9">Username</label>
           <input class="form-control form-control-solid placeholder-no-fix" formControlName="username" type="text" autocomplete="off"
-            placeholder="Username" name="username" />
+            placeholder="Username" name="username" /> -->
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="username" type="text" autocomplete="off" name="username">
+              <mat-placeholder class="placeholder">Email ID</mat-placeholder>
+            </mat-form-field>
         </div>
         <div class="form-group">
-          <label class="control-label visible-ie8 visible-ie9">Password</label>
+          <!-- <label class="control-label visible-ie8 visible-ie9">Password</label>
           <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"
-            formControlName="password" name="password" />
+            formControlName="password" name="password" /> -->
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="password" type="password" autocomplete="off" name="password">
+              <mat-placeholder class="placeholder">Password</mat-placeholder>
+            </mat-form-field>
         </div>
         <div class="form-actions">
           <a [routerLink]="['/admin/recruitment/manage-applicants']" (click)="onSubmit(loginForm.value)" class="btn btn-success uppercase">Login</a>
-          <label class="rememberme check">
-            <input type="checkbox" name="remember" value="1" />Remember </label>
+          <!-- <label class="rememberme check">
+            <input type="checkbox" name="remember" value="1" />Remember </label> -->
+            <mat-checkbox color="primary" style="margin-left:5px">Remember me!</mat-checkbox>
+
           <a [routerLink]="['/forgot-pw']" id="forget-password" class="forget-password">Forgot Password?</a>
         </div>
       </form>
