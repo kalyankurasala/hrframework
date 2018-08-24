@@ -12,9 +12,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RecruitmentRoutingModule,
     ModalModule,
     FormsModule,
-     ReactiveFormsModule
-
+    ReactiveFormsModule,
   ],
-  declarations: [ ManageApplicantsComponent, ManageJobsComponent]
+  declarations: [ManageApplicantsComponent, ManageJobsComponent]
 })
-export class RecruitmentModule { }
+export class RecruitmentModule { 
+
+}

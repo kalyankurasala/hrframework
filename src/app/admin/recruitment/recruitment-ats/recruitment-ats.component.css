@@ -488,3 +488,38 @@ p{
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
+
+
+/*SCROLL BAR STYLES*/
+.large-2 {
+	box-shadow: 2px 2px 20px 2px #a0a0a0;
+	margin-top: 20px;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+.force-overflow {
+	min-height: 450px;
+}
+
+.large-2::-webkit-scrollbar-track {
+	padding: 2px 0;
+	background-color: #dedede;
+}
+
+.large-2::-webkit-scrollbar {
+	width: 10px;
+}
+
+.large-2::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #737272;
+	border: 1px solid #000;
+}
+
+
+::ng-deep  .timeline::before{
+	background-color: #848080 !important;
+}
+/* SCROLL BAR STYLES END*/

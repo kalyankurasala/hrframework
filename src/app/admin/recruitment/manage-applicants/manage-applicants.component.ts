@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from '../../../../../node_modules/ngx-bootstrap';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
+
 @Component({
   selector: 'app-manage-applicants',
   templateUrl: './manage-applicants.component.html',
@@ -9,15 +10,15 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 })
 
 
-
 export class ManageApplicantsComponent implements OnInit {
   @ViewChild('addApplicantModal') public addApplicantModal: ModalDirective;
   @ViewChild('deleteApplicantModal') public deleteApplicantModal: ModalDirective;
 
   applicantAddEditForm: FormGroup;
+
+
   constructor(private fb: FormBuilder) {
     this.fnApplicantAddEditForm();
-
   }
 
   fnApplicantAddEditForm() {
@@ -58,4 +59,9 @@ export class ManageApplicantsComponent implements OnInit {
       this.deleteApplicantModal.hide();
     }
   }
+
+
+  
 }
+
+
