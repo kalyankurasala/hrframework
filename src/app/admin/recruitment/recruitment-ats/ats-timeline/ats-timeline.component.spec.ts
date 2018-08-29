@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AtsTimelineComponent } from './ats-timeline.component';
 
 describe('AtsTimelineComponent', () => {
