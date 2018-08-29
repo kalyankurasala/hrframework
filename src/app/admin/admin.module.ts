@@ -10,7 +10,9 @@ import { AluminiLayoutComponent } from './alumini/alumini-layout/alumini-layout.
 import { CultureComponent } from './culture/culture/culture.component';
 import { ChartModule } from 'angular-highcharts';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { TabsModule } from 'ngx-bootstrap';
+import { TabsModule, RatingModule } from 'ngx-bootstrap';
+import { AtsTimelineComponent } from './recruitment/recruitment-ats/ats-timeline/ats-timeline.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   imports: [
@@ -18,8 +20,12 @@ import { TabsModule } from 'ngx-bootstrap';
     AdminRoutingModule,
     StepsModule,
     ChartModule,
-    TabsModule
+    TabsModule,
+    ScrollToModule.forRoot(),
+    RatingModule
+
   ],
-  declarations: [AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent, AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent]
+  declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
+     AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
 })
 export class AdminModule { }

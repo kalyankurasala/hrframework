@@ -16,6 +16,11 @@
     border-bottom: 3px solid #158ac9 !important;
 }
 
+::ng-deep .nav>li>a:focus,::ng-deep  .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #fff;
+}
+
 .tab-content{
     box-shadow: 2px 2px 21px 2px #cac7c7;
 }

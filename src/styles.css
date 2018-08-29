@@ -2,7 +2,6 @@
 
 
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-
 .example-form {
     min-width: 150px;
     max-width: 500px;
@@ -52,6 +51,7 @@ thead{
     min-height: 50px;
     background: #ddd;
     padding: 9px 20px 8px 0px;
+    overflow-y: hidden;
 }
 
 .header-icon-band {
@@ -84,3 +84,27 @@ thead{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+
+/*modal allignment of text*/
+.modalign{
+    padding: 16px;
+    text-align: center;
+}
+.icon-band{
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+.box_shadow{
+    box-shadow: 2px 2px 20px 2px #a0a0a0;
+}
+.m-tb-20{
+    margin: 20px 0px 25px 0px;
+}
+hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 0;
+}

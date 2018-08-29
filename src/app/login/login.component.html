@@ -32,7 +32,7 @@
               <mat-placeholder class="placeholder">Email ID</mat-placeholder>
             </mat-form-field>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="margin-bottom: 0;">
           <!-- <label class="control-label visible-ie8 visible-ie9">Password</label>
           <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"
             formControlName="password" name="password" /> -->
@@ -41,13 +41,15 @@
               <mat-placeholder class="placeholder">Password</mat-placeholder>
             </mat-form-field>
         </div>
-        <div class="form-actions">
-          <a [routerLink]="['/admin/recruitment/manage-applicants']" (click)="onSubmit(loginForm.value)" class="btn btn-success uppercase">Login</a>
+        <div class="form-group">
+          <div class="col-sm-12" style="padding:0;">
+            <mat-checkbox color="primary">Remember me!</mat-checkbox>
+            <a [routerLink]="['/forgot-pw']" style="margin-top:1px "id="forget-password" class="forget-password pull-right">Forgot Password?</a>
+          </div>
+            <a [routerLink]="['/admin/recruitment/manage-applicants']" (click)="onSubmit(loginForm.value)" class="btn btn-success uppercase">Login</a>
           <!-- <label class="rememberme check">
             <input type="checkbox" name="remember" value="1" />Remember </label> -->
-            <mat-checkbox color="primary" style="margin-left:5px">Remember me!</mat-checkbox>
-
-          <a [routerLink]="['/forgot-pw']" id="forget-password" class="forget-password">Forgot Password?</a>
+            
         </div>
       </form>
       <!-- END LOGIN FORM -->
@@ -55,6 +57,6 @@
 
   </div>
   <div class="copyright">
-    2018 © HR - RSFAC. Option Matrix.
+    2018 © HR - INTRANET Option Matrix.
   </div>
 </div>

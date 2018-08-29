@@ -4,3 +4,41 @@
 .mar-btm-10{
     margin-bottom: 10px;
 }           
+
+
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px;
+    font-size: 22px;
+    line-height: 1.33;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
+.text-white {
+    color: #fff !important;
+}
+
+.bg-dark-teal {
+    background-color: #229494 !important;
+}
+.table thead tr th {
+    font-size: 14px;
+    font-weight: 500;
+}
+.bg-blue {
+    background-color: blue;
+}
+.pull-right{
+    margin-left:5px; 
+}
+.showtest{
+    display: inline-block !important;
+
+}
+.hidetest{
+    display: none !important;
+}

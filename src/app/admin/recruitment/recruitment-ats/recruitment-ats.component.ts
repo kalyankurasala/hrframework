@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RatingModule } from "ngx-rating";
 
 @Component({
   selector: 'app-recruitment-ats',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recruitment-ats.component.css']
 })
 export class RecruitmentAtsComponent implements OnInit {
+  starsCount: number;
+  starsCounts: number[] = [];
 
   constructor() { }
 

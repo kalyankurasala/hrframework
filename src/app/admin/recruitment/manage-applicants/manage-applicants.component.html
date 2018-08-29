@@ -6,8 +6,15 @@
     <p class="sub-header-new">This page is used to manage Applicants.</p>
 </div>
 <!--End f bread crumb -->
+<div style="margin-bottom:10px;padding: 0;" class="col-sm-12">
+    <a class="btn-circle btn btn-lg bg-dark-teal text-white pull-right" tooltip="Filter" placement="bottom" (click)="shouldShow = !shouldShow"><i
+            class="fa fa-filter"></i></a>
 
-<div class="portlet box blue-hoki" style="border: 1px solid #3c8dbc; float: left;">
+    <a class="btn-circle btn btn-lg bg-blue text-white pull-right" (click)="fnAddApplicantModal(1)" placement="bottom" tooltip="Add Applicant"><i
+            class="fa fa-plus"></i></a>
+</div>
+
+<div class="portlet box blue-hoki" [ngClass]="{showtest: shouldShow, hidetest: !shouldShow}" style="border: 1px solid #3c8dbc; float: left;">
     <div class="portlet-title " style="background-color: #3c8dbc; color: #fff; float: left; width: 100%;">
         <div class="caption ">
             <i class="fa fa-search"></i> Advanced Filters
@@ -15,7 +22,7 @@
         <!-- <div class="tools"><a href="javascript:;" class="collapse"></a></div> -->
 
     </div>
-    <div class="portlet-body form pull-left">
+    <div class="portlet-body  form pull-left">
 
         <div class="form-body">
             <div class="row  col-sm-12">
@@ -161,13 +168,15 @@
     <!-- END form-body -->
 </div>
 
-<div class="row mar-btm-10">
+
+
+<!-- <div class="row mar-btm-10">
     <div class="col-sm-12">
         <button class="btn btn-success pull-right" (click)="fnAddApplicantModal(1)">
             <i class="fa fa-plus"></i> Add Applicant
         </button>
     </div>
-</div>
+</div> -->
 
 <!--FILTER SECTION END-->
 
@@ -231,7 +240,6 @@
                     </table>
                 </div>
                 <!-- /.box-body -->
-
             </div>
             <!-- /.box -->
         </div>
@@ -239,10 +247,6 @@
 </div>
 
 <!--DATA TABLE END-->
-
-
-
-
 
 <!--APPLICANT MODAL START-->
 <div class="modal fade" bsModal #addApplicantModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">

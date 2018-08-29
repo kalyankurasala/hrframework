@@ -14,3 +14,7 @@ bottom: 0px;
 text-align: center;
 } */
 
+::ng-deep .mat-checkbox-inner-container {
+    width: 14px !important;
+    height: 14px !important;
+}

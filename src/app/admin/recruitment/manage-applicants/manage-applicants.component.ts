@@ -2,11 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from '../../../../../node_modules/ngx-bootstrap';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
-
 @Component({
   selector: 'app-manage-applicants',
   templateUrl: './manage-applicants.component.html',
-  styleUrls: ['./manage-applicants.component.css']
+  styleUrls: ['./manage-applicants.component.css'],
 })
 
 
@@ -15,13 +14,14 @@ export class ManageApplicantsComponent implements OnInit {
   @ViewChild('deleteApplicantModal') public deleteApplicantModal: ModalDirective;
 
   applicantAddEditForm: FormGroup;
-
+  id: number;
+  public shouldShow = false;
 
   constructor(private fb: FormBuilder) {
     this.fnApplicantAddEditForm();
   }
 
-  fnApplicantAddEditForm() {
+ fnApplicantAddEditForm() {
 
     this.applicantAddEditForm = this.fb.group({
       vcName: new FormControl,
@@ -60,8 +60,6 @@ export class ManageApplicantsComponent implements OnInit {
     }
   }
 
-
-  
 }
 
 
