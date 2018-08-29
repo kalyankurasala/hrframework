@@ -1,9 +1,22 @@
-<div class="col-sm-12 row">
+<div class="col-sm-12 margin-top-15">
+  <div class="col-sm-12">
+    <div class="col-sm-12 box_shadow " style="background-color:#4A90E2">
+      <div class="col-sm-9">
+        <div class="col-sm-12 heading">
+        </div>
+        <div class="col-sm-12 body">
 
+        </div>
+      </div>
+      <div class="col-sm-3 margin-top-bottom-25" style="background-color:#1a69c5;height:150px">
 
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
+<!-- content start-->
+<div class="col-sm-12">
   <div class="col-sm-12 col-md-3 sticky">
 
     <!-- <ul class="timeline">
@@ -172,19 +185,25 @@
         <li class="StepProgress-item"><strong>Provide feedback</strong></li>
       </ul> -->
     <div style="width:300px;" class="box_shadow">
-
+      <div class="col-sm-12">
+        <h4><strong> Process</strong></h4>
+        <b>
+          <hr></b>
+      </div>
       <ul id="progress" style="padding: 10px 0 10px 20px;">
         <li>
           <div class="node green"></div>
-          <p [ngx-scroll-to]="'div_InitialHR'" [ngx-scroll-to-offset]="105" style="cursor:pointer">Initial HR Round</p>
-          <!-- <p> Initial HR Round</p> -->
+          <!-- <p [ngx-scroll-to]="'div_InitialHR'" [ngx-scroll-to-offset]="322" style="cursor:pointer">Initial HR Round <a class="pull-right">ADD</a>
+          </p> -->
+          <p [ngx-scroll-to]="'div_InitialHR'" [ngx-scroll-to-offset]="322" style="cursor:pointer">Initial HR Round
+          </p>
         </li>
         <li>
           <div class="divider green"></div>
         </li>
         <li>
           <div class="node green"></div>
-          <p [ngx-scroll-to]="'div_IQtest'" style="cursor:pointer" [ngx-scroll-to-offset]="105">IQ test </p>
+          <p [ngx-scroll-to]="'div_IQtest'" style="cursor:pointer" [ngx-scroll-to-offset]="322">IQ Test </p>
           <!-- <p> IQ Test</p> -->
         </li>
         <li>
@@ -192,7 +211,7 @@
         </li>
         <li>
           <div class="node green"></div>
-          <p [ngx-scroll-to]="'div_FirstValidation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">First Validation
+          <p [ngx-scroll-to]="'div_FirstValidation'" style="cursor:pointer" [ngx-scroll-to-offset]="322">First Validation
           </p>
           <!-- <p>First Validation</p> -->
         </li>
@@ -201,8 +220,8 @@
         </li>
         <li>
           <div class="node green activated"></div>
-          <p [ngx-scroll-to]="'div_SecondValidation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Second Validation
-          </p>
+          <p [ngx-scroll-to]="'div_SecondValidation'" style="cursor:pointer" [ngx-scroll-to-offset]="322"><b>Second Validation
+            </b></p>
           <!-- <p>Second validation</p> -->
         </li>
         <li>
@@ -210,7 +229,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_HRManagaer'" style="cursor:pointer" [ngx-scroll-to-offset]="105">HR Manager Round</p>
+          <p [ngx-scroll-to]="'div_HRManagaer'" style="cursor:pointer" [ngx-scroll-to-offset]="322">HR Manager Round</p>
           <!-- <p>HR Manager Round</p> -->
         </li>
         <li>
@@ -218,7 +237,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_FinalInterview'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Final Interview</p>
+          <p [ngx-scroll-to]="'div_FinalInterview'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Final Interview</p>
           <!-- <p>Final Interview </p> -->
         </li>
         <li>
@@ -226,7 +245,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_WaitingList'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Waiting List</p>
+          <p [ngx-scroll-to]="'div_WaitingList'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Waiting List</p>
           <!-- <p>Waiting list</p> -->
         </li>
         <li>
@@ -234,7 +253,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_ReferenceCheck'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Reference check</p>
+          <p [ngx-scroll-to]="'div_ReferenceCheck'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Reference check</p>
           <!-- <p>Reference Check</p> -->
         </li>
         <li>
@@ -242,7 +261,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_OfferLetter'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Offer Letter</p>
+          <p [ngx-scroll-to]="'div_OfferLetter'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Offer Letter</p>
           <!-- <p>Offer Letter</p> -->
         </li>
         <li>
@@ -250,7 +269,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_EmployerConfirmation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Employer Confirmation</p>
+          <p [ngx-scroll-to]="'div_EmployerConfirmation'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Employer Confirmation</p>
           <!-- <p>Employer Confirmation</p> -->
         </li>
         <li>
@@ -258,7 +277,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_OfficeVisit'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Office Visit</p>
+          <p [ngx-scroll-to]="'div_OfficeVisit'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Office Visit</p>
           <!-- <p>Office Visit</p> -->
         </li>
         <li>
@@ -266,7 +285,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_TeamIntro'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Team Intro</p>
+          <p [ngx-scroll-to]="'div_TeamIntro'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Team Intro</p>
           <!-- <p>Team Intro</p> -->
         </li>
         <li>
@@ -274,7 +293,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_Induction'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Induction</p>
+          <p [ngx-scroll-to]="'div_Induction'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Induction</p>
           <!-- <p>Induction</p> -->
         </li>
         <li>
@@ -282,7 +301,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_Certification'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Certification</p>
+          <p [ngx-scroll-to]="'div_Certification'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Certification</p>
           <!-- <p>Certification</p> -->
         </li>
         <li>
@@ -290,7 +309,7 @@
         </li>
         <li>
           <div class="node grey"></div>
-          <p [ngx-scroll-to]="'div_probation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Probation </p>
+          <p [ngx-scroll-to]="'div_probation'" style="cursor:pointer" [ngx-scroll-to-offset]="322">Probation </p>
           <!-- <p>Probation</p> -->
         </li>
       </ul>
@@ -493,67 +512,233 @@
 
 
   <div class="col-sm-12 col-md-9 pull-right">
-    <div id="div_InitialHR" style="padding:10px;" class="box_shadow m-tb-20 row">
+    <div id="div_InitialHR" class="box_shadow m-tb-20 row padding-10">
       <div class="col-sm-12">
-        <h4><strong> Initial HR Round </strong></h4>
-        <b>
-          <hr></b>
-      </div>
-      <div class="col-sm-12">
-        <div class="col-sm-4"><strong>Confidence <rating [(ngModel)]="starsCount" (click)="feedBackChange(starsCount)" [max]="5">
-            </rating></strong>
+        <div class="col-sm-12">
+          <h4><strong> Initial HR Round &nbsp;&nbsp;</strong>
+            <a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a>
+          </h4>
+          <b>
+            <hr></b>
         </div>
-        <div class="col-sm-4"><strong>Communication</strong> = 3/5</div>
-        <div class="col-sm-4"><strong>Confidence</strong> = 4/5</div>
+        <div class="col-sm-12">
+          <!-- <div class="col-sm-4"><strong>Confidence <rating [(ngModel)]="starsCount" (click)="feedBackChange(starsCount)" [max]="5"
+          [readonly]="false"
+          [disabled]="false"
+          [required]="true"
+          [float]="true"
+          [titles]="['one', 'two', 'three', 'four', 'five']">>
+            </rating></strong>
+        </div> -->
+          <div class="col-sm-4"><strong>Confidence </strong> = 4/5 </div>
+          <div class="col-sm-4"><strong>Communication</strong> = 3/5</div>
+          <div class="col-sm-4"><strong>Confidence</strong> = 4/5</div>
+          <div class="col-sm-12 margin-top-15">
+            <span>Comments on the communication skills of a candidate</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="div_IQtest" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong>IQ Test &nbsp;&nbsp;</strong>
+            <a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a>
+          </h4>
+          <b>
+            <hr></b>
+        </div>
         <div class="col-sm-12">
 
-          <span>Comments on the communication skills of a candidate</span>
+          <div class="col-sm-3"><strong>Total </strong> : 110</div>
+          <div class="col-sm-3"><strong>Analytical</strong>: 100</div>
+          <div class="col-sm-3"><strong>Logical</strong>: 107</div>
+          <div class="col-sm-3"><strong>Reasoning</strong>: 127</div>
+          <div class="col-sm-12 margin-top-15">
+          </div>
         </div>
       </div>
     </div>
-    <div id="div_IQtest" class="box_shadow m-tb-20">
-      You've reached your destination.
+
+    <div id="div_FirstValidation" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong>First Validation &nbsp;&nbsp;</strong>
+            <a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a>
+          </h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_SecondValidation" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Second Validation &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_HRManagaer" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> HR Manager Round &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_FinalInterview" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Final Interview &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_WaitingList" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Waiting List &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_ReferenceCheck" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Reference Check &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_OfferLetter" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Offer Letter &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_EmployerConfirmation" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Employer Confirmation &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_OfficeVisit" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong>Office Visit &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <div id="div_TeamIntro" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong>Team Intro &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
     </div>
 
-    <div id="div_FirstValidation" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_SecondValidation" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_HRManagaer" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_FinalInterview" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_WaitingList" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_ReferenceCheck" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_OfferLetter" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_EmployerConfirmation" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_OfficeVisit" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
-    <div id="div_TeamIntro" class="box_shadow m-tb-20">
-      You've reached your destination.
-    </div>
+    <div id="div_Induction" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong>Induction &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
 
-    <div id="div_Induction" class="box_shadow m-tb-20">
-      You've reached your destination.
+        </div>
+      </div>
     </div>
-    <div id="div_Certification" class="box_shadow m-tb-20">
-      You've reached your destination.
+    <div id="div_Certification" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Certification &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
     </div>
-    <div id="div_probation" class="box_shadow m-tb-20">
-      You've reached your destination.
+    <div id="div_probation" class="box_shadow padding-10 m-tb-20">
+      <div class="col-sm-12">
+        <div class="col-sm-12">
+          <h4><strong> Probation &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
+          <b>
+            <hr></b>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<!--ADD MODAL START-->
+<div class="modal fade" bsModal #addModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          <b>Modal</b>
+        </h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="fnAddModal(0)">Save</button>
+        <button type="button" class="btn btn-default" (click)="fnAddModal(0)">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--ADD MODAL END-->

@@ -483,7 +483,7 @@ table{
 	border: 1px solid #428bca !important;
 }
 p{
-	font-size: 17px;
+	/* font-size: 17px; */
 	font-weight: 500;
 	margin-bottom: 0;
 	padding-bottom: 0;
@@ -529,3 +529,18 @@ p{
     position: sticky;
     top: 0;
 }
+
+::ng-deep .star-icon::before {
+	/* color: #b6950c; */
+	color: red !important;
+}
+
+.box_shadow{
+	min-height: 150px;
+}
+.padding-10{
+	padding:10px !important;
+
+}
+
+
