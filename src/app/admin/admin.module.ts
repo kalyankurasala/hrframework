@@ -13,11 +13,14 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { TabsModule, RatingModule } from 'ngx-bootstrap';
 import { AtsTimelineComponent } from './recruitment/recruitment-ats/ats-timeline/ats-timeline.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     StepsModule,
     ChartModule,
     TabsModule,
