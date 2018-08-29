@@ -19,6 +19,8 @@ import { MatInputModule, MatDialogModule, MatButtonModule } from '@angular/mater
     MatDialogModule,
     MatButtonModule,
     TooltipModule
+    TooltipModule,
+    
   ],
   declarations: [ManageApplicantsComponent, ManageJobsComponent],
 })

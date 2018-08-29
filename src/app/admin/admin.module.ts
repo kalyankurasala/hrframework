@@ -11,10 +11,12 @@ import { CultureComponent } from './culture/culture/culture.component';
 import { ChartModule } from 'angular-highcharts';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { TabsModule } from 'ngx-bootstrap';
+import { TabsModule, ModalModule } from 'ngx-bootstrap';
 import { AtsTimelineComponent } from './recruitment/recruitment-ats/ats-timeline/ats-timeline.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RatingModule} from "ngx-rating";
+import { RatingModule } from "ngx-rating";
 
 @NgModule({
   imports: [
@@ -27,8 +29,12 @@ import {RatingModule} from "ngx-rating";
     TabsModule,
     ScrollToModule.forRoot(),
     RatingModule
+    RatingModule,
+    ModalModule
   ],
   declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
      AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
+  declarations: [AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
+    AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent, AtsTimelineComponent],
 })
 export class AdminModule { }
