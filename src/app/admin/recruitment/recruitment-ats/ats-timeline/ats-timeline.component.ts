@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtsTimelineComponent implements OnInit {
 
-  constructor() { }
+ 
+  ngOnInit(){
 
-  ngOnInit() {
   }
+  constructor() {}
 
 }

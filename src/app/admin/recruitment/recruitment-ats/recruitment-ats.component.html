@@ -1,8 +1,12 @@
-<div class="col-sm-12">
+<div class="col-sm-12 row">
 
-  <div class="col-sm-3">
-    <div class="col-sm-12">
-      <!-- <ul class="timeline">
+
+
+
+
+  <div class="col-sm-12 col-md-3 sticky">
+
+    <!-- <ul class="timeline">
         <li>
           <div class="timeline-badge success">
           </div>
@@ -158,10 +162,7 @@
             </div>
           </li>
       </ul> -->
-
-
-
-      <!-- <ul class="StepProgress">
+    <!-- <ul class="StepProgress">
 
         <li class="StepProgress-item is-done"><strong>Post a contest</strong></li>
         <li class="StepProgress-item is-done"><strong>Award an entry</strong>
@@ -170,44 +171,129 @@
         <li class="StepProgress-item current"><strong>Handover</strong></li>
         <li class="StepProgress-item"><strong>Provide feedback</strong></li>
       </ul> -->
-   
-   
+    <div style="width:300px;" class="box_shadow">
 
-      <ul id="progress">
-          <li><div class="node green"></div><p>Initial HR Round</p></li>
-          <li><div class="divider green"></div></li>
-          <li><div class="node green"></div><p>IQ test</p></li>
-          <li><div class="divider green"></div></li>
-          <li><div class="node green"></div><p>First Validation</p></li>
-          <li><div class="divider green"></div></li>
-          <li><div class="node green activated"></div><p>Second validation</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>HR Manager Round</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Final Interview </p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Waiting list</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Reference Check</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Offer Letter</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Employer Confirmation</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Office Visit</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Team Intro</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Induction</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Certification</p></li>
-          <li><div class="divider grey"></div></li>
-          <li><div class="node grey"></div><p>Probation</p></li>
+      <ul id="progress" style="padding: 10px 0 10px 20px;">
+        <li>
+          <div class="node green"></div>
+          <p [ngx-scroll-to]="'div_InitialHR'" [ngx-scroll-to-offset]="105" style="cursor:pointer">Initial HR Round</p>
+          <!-- <p> Initial HR Round</p> -->
+        </li>
+        <li>
+          <div class="divider green"></div>
+        </li>
+        <li>
+          <div class="node green"></div>
+          <p [ngx-scroll-to]="'div_IQtest'" style="cursor:pointer" [ngx-scroll-to-offset]="105">IQ test </p>
+          <!-- <p> IQ Test</p> -->
+        </li>
+        <li>
+          <div class="divider green"></div>
+        </li>
+        <li>
+          <div class="node green"></div>
+          <p [ngx-scroll-to]="'div_FirstValidation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">First Validation
+          </p>
+          <!-- <p>First Validation</p> -->
+        </li>
+        <li>
+          <div class="divider green"></div>
+        </li>
+        <li>
+          <div class="node green activated"></div>
+          <p [ngx-scroll-to]="'div_SecondValidation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Second Validation
+          </p>
+          <!-- <p>Second validation</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_HRManagaer'" style="cursor:pointer" [ngx-scroll-to-offset]="105">HR Manager Round</p>
+          <!-- <p>HR Manager Round</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_FinalInterview'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Final Interview</p>
+          <!-- <p>Final Interview </p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_WaitingList'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Waiting List</p>
+          <!-- <p>Waiting list</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_ReferenceCheck'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Reference check</p>
+          <!-- <p>Reference Check</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_OfferLetter'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Offer Letter</p>
+          <!-- <p>Offer Letter</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_EmployerConfirmation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Employer Confirmation</p>
+          <!-- <p>Employer Confirmation</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_OfficeVisit'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Office Visit</p>
+          <!-- <p>Office Visit</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_TeamIntro'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Team Intro</p>
+          <!-- <p>Team Intro</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_Induction'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Induction</p>
+          <!-- <p>Induction</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_Certification'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Certification</p>
+          <!-- <p>Certification</p> -->
+        </li>
+        <li>
+          <div class="divider grey"></div>
+        </li>
+        <li>
+          <div class="node grey"></div>
+          <p [ngx-scroll-to]="'div_probation'" style="cursor:pointer" [ngx-scroll-to-offset]="105">Probation </p>
+          <!-- <p>Probation</p> -->
+        </li>
       </ul>
-   
-   
-   
-   
     </div>
 
     <!-- 
@@ -287,17 +373,12 @@
 
   </div>
 
-
-  <div class="col-sm-9">
-    <div class="col-sm-12 hide" style="background:#526781;">
-      <div class="col-sm-3">
-        <span>Ritche Gold</span>
-      </div>
+  <div class="col-sm-12 col-md-9 hide">
+    <div class="col-sm-12 large-2">
+      <!-- <app-ats-timeline class="force-overflow"></app-ats-timeline> -->
+      <app-ats-timeline class=""></app-ats-timeline>
     </div>
-<div class="col-sm-12 large-2">
-    <app-ats-timeline class="force-overflow"></app-ats-timeline>
-  </div>
-    <div class="col-sm-12 hide">
+    <!-- <div class="col-sm-12 hide">
       <div class="row header-section col-xs-12" style="background:#526781; margin:10px 0 20px;padding:0;">
         <a aria-expanded="false" class="btn blue-hoki text-left bigDropDown col-xs-3 col-sm-3" data-close-others="true" data-target="#user_location_date_modal"
           data-toggle="modal" href="#" id="header_top_filter" s="" style="color:#FFF!important;">
@@ -332,11 +413,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--End of filter -->
 
     <!-- start of table -->
-    <div class="col-sm-12 table-responsive hide">
+    <!-- <div class="col-sm-12 table-responsive hide">
       <div class=" form-inline no-footer no-border" id="tasks_grid_wrapper" role="grid">
         <table id="tasks_grid" class="table no-footer table-border border" cellspacing="0" cellpadding="0" border="0" aria-describedby="tasks_grid_info">
           <thead>
@@ -407,6 +488,73 @@
           </tbody>
         </table>
       </div>
+    </div> -->
+  </div>
+
+
+  <div class="col-sm-12 col-md-9 pull-right">
+    <div id="div_InitialHR" style="padding:10px;" class="box_shadow m-tb-20 row">
+      <div class="col-sm-12">
+        <h4><strong> Initial HR Round </strong></h4>
+        <b>
+          <hr></b>
+      </div>
+      <div class="col-sm-12">
+        <div class="col-sm-4"><strong>Confidence <rating [max]="5" iconClass="fa-star" fullIcon="★"
+              emptyIcon="☆" [readonly]="false" [titles]="['one', 'two', 'three', 'four', 'five']">
+            </rating></strong>
+        </div>
+        <div class="col-sm-4"><strong>Communication</strong> = 3/5</div>
+        <div class="col-sm-4"><strong>Confidence</strong> = 4/5</div>
+        <div class="col-sm-12">
+
+          <span>Comments on the communication skills of a candidate</span>
+        </div>
+      </div>
+    </div>
+    <div id="div_IQtest" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+
+    <div id="div_FirstValidation" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_SecondValidation" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_HRManagaer" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_FinalInterview" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_WaitingList" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_ReferenceCheck" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_OfferLetter" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_EmployerConfirmation" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_OfficeVisit" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_TeamIntro" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+
+    <div id="div_Induction" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_Certification" class="box_shadow m-tb-20">
+      You've reached your destination.
+    </div>
+    <div id="div_probation" class="box_shadow m-tb-20">
+      You've reached your destination.
     </div>
   </div>
 </div>

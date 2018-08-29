@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ModalDirective } from 'ngx-bootstrap';
-import { FormGroup, FormBuilder,  FormControl } from '@angular/forms';
+import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { ModalDirective, BsModalService } from 'ngx-bootstrap';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { ManagejobsApplicants } from './managejobs-applicants';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-manage-jobs',
@@ -9,26 +10,37 @@ import { ManagejobsApplicants } from './managejobs-applicants';
   styleUrls: ['./manage-jobs.component.css']
 })
 
-
-
 export class ManageJobsComponent implements OnInit {
-
-
-  tableList:ManagejobsApplicants[]=[
-    { intid:1, vcJob: 'PHP', vcCode: ' php1234', vcDescription: 'This is Php', vcVideoJD:  ' ' },
-    { intid:2, vcJob: '.NET', vcCode: '.net2345', vcDescription: 'This is .Net', vcVideoJD:  ' ' },
-    { intid:3,vcJob: 'ANDROID', vcCode: 'and4567', vcDescription: 'This is Android', vcVideoJD: ' ' },
-    { intid:4,vcJob: 'IOS', vcCode: 'ios0987', vcDescription: 'This is IOS', vcVideoJD: ' ' }
+  modalRef: BsModalRef;
+  config = {
+    ignoreBackdropClick: true
+  };
+ 
+ 
+  tableList: ManagejobsApplicants[] = [
+    { intid: 1, vcJob: 'PHP', vcCode: ' php1234', vcDescription: 'This is Php', vcVideoJD: ' ' },
+    { intid: 2, vcJob: '.NET', vcCode: '.net2345', vcDescription: 'This is .Net', vcVideoJD: ' ' },
+    { intid: 3, vcJob: 'ANDROID', vcCode: 'and4567', vcDescription: 'This is Android', vcVideoJD: ' ' },
+    { intid: 4, vcJob: 'IOS', vcCode: 'ios0987', vcDescription: 'This is IOS', vcVideoJD: ' ' }
   ];
 
   userEditForm: FormGroup;
 
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private modalService: BsModalService) {
     this.createEditForm();
   }
+
+
   ngOnInit() {
   }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, this.config);
+  }
+
+
+
+
   createEditForm() {
     this.userEditForm = this.fb.group({
       Job: new FormControl,

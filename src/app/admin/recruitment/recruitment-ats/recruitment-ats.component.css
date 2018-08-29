@@ -494,7 +494,7 @@ p{
 .large-2 {
 	box-shadow: 2px 2px 20px 2px #a0a0a0;
 	margin-top: 20px;
-	height: 500px;
+	/* height: 500px; */
 	overflow-y: scroll;
 }
 
@@ -523,3 +523,9 @@ p{
 	background-color: #848080 !important;
 }
 /* SCROLL BAR STYLES END*/
+
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
