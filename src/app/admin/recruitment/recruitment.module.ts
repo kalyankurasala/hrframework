@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RecruitmentRoutingModule } from './/recruitment-routing.module';
 import { ManageApplicantsComponent } from './manage-applicants/manage-applicants.component';
 import { ManageJobsComponent } from './manage-jobs/manage-jobs.component';
-import { ModalModule, TooltipModule, RatingModule } from 'ngx-bootstrap';
+import { ModalModule, TooltipModule } from 'ngx-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule, MatDialogModule, MatButtonModule } from '@angular/material';
 
@@ -18,8 +18,7 @@ import { MatInputModule, MatDialogModule, MatButtonModule } from '@angular/mater
     MatInputModule,
     MatDialogModule,
     MatButtonModule,
-    TooltipModule,
-    RatingModule
+    TooltipModule
   ],
   declarations: [ManageApplicantsComponent, ManageJobsComponent],
 })

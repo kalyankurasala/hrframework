@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RatingModule } from "ngx-rating";
 
 @Component({
   selector: 'app-recruitment-ats',
