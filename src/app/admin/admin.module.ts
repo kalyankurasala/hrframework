@@ -14,6 +14,7 @@ import { TabsModule } from 'ngx-bootstrap';
 import { AtsTimelineComponent } from './recruitment/recruitment-ats/ats-timeline/ats-timeline.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {RatingModule} from "ngx-rating";
 
 @NgModule({
   imports: [
@@ -25,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ChartModule,
     TabsModule,
     ScrollToModule.forRoot(),
-
+    RatingModule
   ],
   declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
      AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
