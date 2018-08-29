@@ -21,9 +21,11 @@ import {
 } from '@angular/material';
 import { TooltipModule } from 'ngx-bootstrap';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { Rating } from 'ngx-rating';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, ForgotPasswordComponent, RegisterComponent, AdminLayoutComponent],
+  declarations: [[Rating],AppComponent, LoginComponent, ForgotPasswordComponent, RegisterComponent, AdminLayoutComponent],
+exports:[Rating],
   imports: [
     BrowserModule,
     AppRoutingModule,

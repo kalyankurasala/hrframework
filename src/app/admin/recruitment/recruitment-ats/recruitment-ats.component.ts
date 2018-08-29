@@ -4,8 +4,7 @@ import { RatingModule } from "ngx-rating";
 @Component({
   selector: 'app-recruitment-ats',
   templateUrl: './recruitment-ats.component.html',
-  styleUrls: ['./recruitment-ats.component.css'],
-  directives: [Rating]
+  styleUrls: ['./recruitment-ats.component.css']
 })
 export class RecruitmentAtsComponent implements OnInit {
   starsCount: number;

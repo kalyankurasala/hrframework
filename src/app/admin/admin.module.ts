@@ -25,7 +25,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     RatingModule
 
   ],
-  declarations: [AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
-     AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent]
+  declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
+     AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
 })
 export class AdminModule { }
