@@ -18,7 +18,6 @@ import { MatInputModule, MatDialogModule, MatButtonModule } from '@angular/mater
     MatInputModule,
     MatDialogModule,
     MatButtonModule,
-    TooltipModule
     TooltipModule,
     
   ],
