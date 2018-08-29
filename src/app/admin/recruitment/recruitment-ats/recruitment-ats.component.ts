@@ -4,16 +4,18 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-recruitment-ats',
   templateUrl: './recruitment-ats.component.html',
   styleUrls: ['./recruitment-ats.component.css'],
-  
 })
 export class RecruitmentAtsComponent implements OnInit {
-  starsCount: number;
+  starsCount: number=2;
   starsCounts: number[] = [];
 
-  
+
   constructor() { }
 
   ngOnInit() {
   }
+  feedBackChange(e) {
 
+    console.log(e)
+  }
 }
