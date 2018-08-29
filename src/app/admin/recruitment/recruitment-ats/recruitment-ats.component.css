@@ -483,6 +483,7 @@ table{
 	border: 1px solid #428bca !important;
 }
 p{
+	font-size: 17px;
 	/* font-size: 17px; */
 	font-weight: 500;
 	margin-bottom: 0;
