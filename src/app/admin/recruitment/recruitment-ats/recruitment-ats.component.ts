@@ -8,7 +8,6 @@ import { ModalDirective } from '../../../../../node_modules/ngx-bootstrap';
 export class RecruitmentAtsComponent implements OnInit {
 
   @ViewChild('addModal') public addModal: ModalDirective;
-
   starsCount: number=2;
   starsCounts: number[] = [];
 
@@ -30,4 +29,6 @@ export class RecruitmentAtsComponent implements OnInit {
       this.addModal.hide();
     }
   }
+
+
 }

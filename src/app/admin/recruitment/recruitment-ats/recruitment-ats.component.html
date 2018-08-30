@@ -10,21 +10,38 @@
           <b>
             <hr style="margin-top:0px;"></b>
           <div class="col-sm-6">
-            <span class=" margin-top-bottom-25 color-white"><i class="fa fa-map-marker"></i>Hyderabad / Secunderabad </span>
+            <span class=" margin-top-bottom-25 color-white"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Hyderabad / Secunderabad
+            </span>
             <br>
-            <span class="margin-top-bottom-25 color-white"><i class="fa fa-map-marker"></i>5 Year(s) 2 Month(s) </span>
+            <span class="margin-top-bottom-25 color-white"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;5 Year(s) 2 Month(s)
+            </span>
             <br>
-            <span class=" margin-top-bottom-25 color-white"><i class="fa fa-map-marker"></i>INR 6 Lakh(s) </span>
-            
+            <span class=" margin-top-bottom-25 color-white"><i class="fa fa-money"></i>&nbsp;&nbsp;INR 6 Lakh(s) </span>
+
           </div>
           <div class="col-sm-6">
-            <span class="margin-top-bottom-25 color-white"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; +91-999-999-9999</span><br>
-            <span class="margin-top-bottom-25 color-white"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; Nick@optionmatrix.com</span>
+            <span class="margin-top-bottom-25 color-white"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp; +91-999-999-9999</span><br>
+            <span class="margin-top-bottom-25 color-white"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp;
+              Nick@optionmatrix.com
+            </span>
           </div>
         </div>
       </div>
-      <div class="col-sm-3 margin-top-bottom-25" style="background-color:#1a69c5;height:150px;overflow-y: scroll;">
-        <h3 class="text-center" style="color:#e3dfdf">The Personality of a Leo</h3>
+      <div class="col-sm-3 margin-top-bottom-25" style="background-color:#1a69c5;height:150px;">
+        <div class="col-sm-6" style="border-right:1px solid #9e9e9e;height:150px;">
+            <div class="form-group text-center" style="margin-top: 40%;">
+                <label class="wrap-content" title="IQ"><h2 style="line-height:0;">IQ</h2></label><br>
+                <div class="text-center"><label class="label-text" style="color:#eee;color:#b5b3b3;">119</label></div>
+            </div>
+          <!-- <h2 style="line-height: 4;color:#eee;">IQ: 119</h2> -->
+        </div>
+        <div class="col-sm-offset-1 col-sm-5" style="height:150px;">
+            <div class="form-group text-center" style="margin-top: 50%;">
+                <label class="wrap-content" title="Process"><h2 style="line-height:0;">Process</h2></label><br>
+                <div class="text-center"><label class="label-text" style="color:#eee;color:#b5b3b3;">4/12</label></div>
+            </div>
+        </div>
+        <!-- <h3 class="text-center" style="color:#e3dfdf">The Personality of a Leo</h3>
         <h4 style="color:#e3dfdf;text-align: center;text-decoration: underline">Traits</h4>
         <ul style="padding: 0;">
           <li style="color:#e3dfdf" class="margin-top-20">
@@ -43,7 +60,7 @@
           <li style="color:#e3dfdf" class="margin-top-20">
             - Impatient, Arrogant
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </div>
@@ -51,8 +68,8 @@
 
 <!-- content start-->
 <div class="col-sm-12">
-  <div class="col-sm-12 col-md-3 sticky">
-
+  <!-- <div class="col-sm-12 col-md-3 sticky"> -->
+  <div class="col-sm-12 col-md-3">
     <!-- <ul class="timeline">
         <li>
           <div class="timeline-badge success">
@@ -219,11 +236,15 @@
         <li class="StepProgress-item"><strong>Provide feedback</strong></li>
       </ul> -->
     <div style="width:300px;" class="box_shadow">
-      <div class="col-sm-12">
-        <h4><strong> Process</strong></h4>
-        <b>
-          <hr></b>
+      <div class="col-sm-12" style="padding-top: 10px;">
+        <span style="font-size: 21px;"><b> Process</b></span>
+
+        <span class="pull-right" style="margin-top: 8px;">
+          <a (click)="fnAddModal(1)" style="font-weight:bold;text-decoration: none;">Update</a>
+        </span>
+        <hr>
       </div>
+
       <ul id="progress" style="padding: 10px 0 10px 20px;">
         <li>
           <div class="node green"></div>
@@ -426,7 +447,7 @@
 
   </div>
 
-  <div class="col-sm-12 col-md-9 hide">
+  <div class="col-sm-12 col-md-9">
     <div class="col-sm-12 large-2">
       <!-- <app-ats-timeline class="force-overflow"></app-ats-timeline> -->
       <app-ats-timeline class=""></app-ats-timeline>
@@ -545,7 +566,7 @@
   </div>
 
 
-  <div class="col-sm-12 col-md-9 pull-right">
+  <div class="col-sm-12 col-md-9 pull-right hide">
     <div id="div_InitialHR" class="box_shadow m-tb-20 row padding-10">
       <div class="col-sm-12">
         <div class="col-sm-12">
@@ -762,14 +783,48 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">
-          <b>Modal</b>
+          <b>Process Update</b>
         </h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body row">
+
+        <div class="form-group col-lg-12">
+          <div class="col-lg-4">
+            <label class="mt" for="vcName">Select Process:</label>
+          </div>
+          <div class="col-lg-8">
+            <select class="form-control">
+              <option>Initial HR Round</option>
+              <option>IQ Test</option>
+              <option>First Validation</option>
+              <option>Second Validation</option>
+              <option>HR Manager Round</option>
+              <option>Final Interview</option>
+              <option>Waiting List</option>
+              <option>Reference Check</option>
+              <option>Offer Letter</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group col-lg-12">
+          <div class="col-lg-4">
+            <label class="mt" for="vcName" style="line-height: 4;">Comments</label>
+          </div>
+          <div class="col-lg-8">
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Leave a comment"></textarea>
+            </mat-form-field>
+            <!-- <input type="text" class="form-control" formControlName="vcName" placeholder="Applicant Name" /> -->
+          </div>
+        </div>
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="fnAddModal(0)">Save</button>
-        <button type="button" class="btn btn-default" (click)="fnAddModal(0)">Close</button>
+        <div class="col-sm-offset-4">
+          <button type="button" class="btn btn-success" (click)="fnAddModal(0)">Save</button>
+          <button type="button" class="btn btn-default" (click)="fnAddModal(0)">Close</button>
+        </div>
       </div>
     </div>
   </div>
