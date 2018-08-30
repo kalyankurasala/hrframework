@@ -124,3 +124,15 @@ hr {
 .red{
     color: red;
 }
+
+.modal-footer{
+    text-align: center !important;
+}
+.delete-modal
+{
+    text-align:Left !important;
+}
+
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
