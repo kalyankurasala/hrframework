@@ -148,6 +148,10 @@
       border-left-width: 0;
     }
   }
+
+  ::ng-deep .modal-footer {
+    text-align: unset !important;
+}
   
 
 

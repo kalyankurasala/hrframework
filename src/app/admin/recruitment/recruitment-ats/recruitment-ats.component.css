@@ -484,9 +484,9 @@ table{
 	border: 1px solid #428bca !important;
 }
 p{
-	font-size: 17px;
+	font-size: 13px;
 	/* font-size: 17px; */
-	font-weight: 500;
+	/* font-weight: 500; */
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
@@ -553,4 +553,17 @@ p{
 
 .color-white{
 	color: #e3dfdf;
+}
+
+.form-inline .form-group {
+    line-height: 12px;
+}
+
+.wrap-content {
+	color:#eee;
+    text-overflow: ellipsis;
+    /* overflow: hidden; */
+    display: inline-block;
+    white-space: nowrap;
+    /* width: 70px; */
 }

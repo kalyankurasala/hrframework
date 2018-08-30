@@ -29,10 +29,17 @@
       </div>
       <div class="col-sm-3 margin-top-bottom-25" style="background-color:#1a69c5;height:150px;">
         <div class="col-sm-6" style="border-right:1px solid #9e9e9e;height:150px;">
-          <h2 style="line-height: 4;color:#eee;">IQ: 119</h2>
+            <div class="form-group text-center" style="margin-top: 40%;">
+                <label class="wrap-content" title="IQ"><h2 style="line-height:0;">IQ</h2></label><br>
+                <div class="text-center"><label class="label-text" style="color:#eee;color:#b5b3b3;">119</label></div>
+            </div>
+          <!-- <h2 style="line-height: 4;color:#eee;">IQ: 119</h2> -->
         </div>
         <div class="col-sm-offset-1 col-sm-5" style="height:150px;">
-          <h2 style="line-height: 4;color:#eee;"> 04/12 </h2>
+            <div class="form-group text-center" style="margin-top: 50%;">
+                <label class="wrap-content" title="Process"><h2 style="line-height:0;">Process</h2></label><br>
+                <div class="text-center"><label class="label-text" style="color:#eee;color:#b5b3b3;">4/12</label></div>
+            </div>
         </div>
         <!-- <h3 class="text-center" style="color:#e3dfdf">The Personality of a Leo</h3>
         <h4 style="color:#e3dfdf;text-align: center;text-decoration: underline">Traits</h4>
@@ -230,7 +237,7 @@
       </ul> -->
     <div style="width:300px;" class="box_shadow">
       <div class="col-sm-12" style="padding-top: 10px;">
-        <span style="font-size: 21px;"><strong> Process</strong></span>
+        <span style="font-size: 21px;"><b> Process</b></span>
 
         <span class="pull-right" style="margin-top: 8px;">
           <a (click)="fnAddModal(1)" style="font-weight:bold;text-decoration: none;">Update</a>
@@ -786,17 +793,17 @@
             <label class="mt" for="vcName">Select Process:</label>
           </div>
           <div class="col-lg-8">
-              <select class="form-control">
-                <option>Initial HR Round</option>
-                <option>IQ Test</option>
-                <option>First Validation</option>
-                <option>Second Validation</option>
-                <option>HR Manager Round</option>
-                <option>Final Interview</option>
-                <option>Waiting List</option>
-                <option>Reference Check</option>
-                <option>Offer Letter</option>
-              </select>
+            <select class="form-control">
+              <option>Initial HR Round</option>
+              <option>IQ Test</option>
+              <option>First Validation</option>
+              <option>Second Validation</option>
+              <option>HR Manager Round</option>
+              <option>Final Interview</option>
+              <option>Waiting List</option>
+              <option>Reference Check</option>
+              <option>Offer Letter</option>
+            </select>
           </div>
         </div>
 
@@ -814,8 +821,10 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="fnAddModal(0)">Save</button>
-        <button type="button" class="btn btn-default" (click)="fnAddModal(0)">Close</button>
+        <div class="col-sm-offset-4">
+          <button type="button" class="btn btn-success" (click)="fnAddModal(0)">Save</button>
+          <button type="button" class="btn btn-default" (click)="fnAddModal(0)">Close</button>
+        </div>
       </div>
     </div>
   </div>

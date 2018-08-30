@@ -8,18 +8,27 @@ import { ModalDirective } from 'ngx-bootstrap';
 })
 export class AtsTimelineComponent implements OnInit {
 
- 
+
+  @ViewChild('deleteModal') public deleteModal: ModalDirective;
   @ViewChild('addModal') public addModal: ModalDirective;
-  ngOnInit(){
+  ngOnInit() {
 
   }
-  constructor() {}
+  constructor() { }
   fnAddModal(flag) {
     if (flag == 1) {
       this.addModal.show();
     }
     else {
       this.addModal.hide();
+    }
+  }
+  fnDeleteModal(flag) {
+    if (flag == 1) {
+      this.deleteModal.show();
+    }
+    else {
+      this.deleteModal.hide();
     }
   }
 }
