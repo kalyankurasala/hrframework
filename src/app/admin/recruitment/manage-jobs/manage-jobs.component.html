@@ -78,7 +78,11 @@
                                 <label class="mt" for="Job">Job</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="Job" placeholder="Job" />
+                                    <mat-form-field class="example-full-width">
+                                            <input matInput  type="text" autocomplete="off">
+                                            <mat-placeholder class="placeholder">Job</mat-placeholder>
+                                        </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="Job" placeholder="Job" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -86,7 +90,11 @@
                                 <label class="mt" for="Code">Code</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="Code" placeholder="code" />
+                                    <mat-form-field class="example-full-width">
+                                            <input matInput  type="text" autocomplete="off">
+                                            <mat-placeholder class="placeholder">Code</mat-placeholder>
+                                        </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="Code" placeholder="code" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -94,7 +102,11 @@
                                 <label class="mt" for="Description">Description</label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="Description" placeholder="Description" />
+                                    <mat-form-field class="example-full-width">
+                                            <input matInput  type="text" autocomplete="off">
+                                            <mat-placeholder class="placeholder">Description</mat-placeholder>
+                                        </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="Description" placeholder="Description" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -102,7 +114,11 @@
                                 <label class="mt" for="VideoJD">Video JD </label>
                             </div>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" formControlName="VideoJD" placeholder="Video JD Link" />
+                                    <mat-form-field class="example-full-width">
+                                            <input matInput  type="text" autocomplete="off">
+                                            <mat-placeholder class="placeholder">Video JD Link</mat-placeholder>
+                                        </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="VideoJD" placeholder="Video JD Link" /> -->
                             </div>
                         </div>
                     </form>
@@ -130,11 +146,11 @@
                     </span>
             </div>
             <div class="modal-body  container-fluid">
-                <p>Are you sure you want to delete?</p>
+                <p>&nbsp;&nbsp; Are you sure you want to delete?</p>
             </div>
             <div class="modal-footer delete-modal">
                 <button type="submit" class="btn btn-success" (click)="jobDeleteModal(0)">Confirm</button>
-                <button type="button" class="btn btn-default" (click)="jobDeleteModal(0)">Close</button>
+                <button type="button" class="btn btn-default" (click)="jobDeleteModal(0)">Cancel</button>
             </div>
         </div>
     </div>
