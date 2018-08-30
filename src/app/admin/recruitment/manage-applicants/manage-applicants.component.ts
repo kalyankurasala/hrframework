@@ -12,6 +12,8 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 export class ManageApplicantsComponent implements OnInit {
   @ViewChild('addApplicantModal') public addApplicantModal: ModalDirective;
   @ViewChild('deleteApplicantModal') public deleteApplicantModal: ModalDirective;
+  @ViewChild('viewModal') public viewModal: ModalDirective;
+
 
   applicantAddEditForm: FormGroup;
   id: number;
@@ -59,7 +61,14 @@ export class ManageApplicantsComponent implements OnInit {
       this.deleteApplicantModal.hide();
     }
   }
-
+  fnviewModalModal(flag){
+    if (flag == 1) {
+      this.viewModal.show();
+    }
+    else {
+      this.viewModal.hide();
+    }
+  }
 }
 
 
