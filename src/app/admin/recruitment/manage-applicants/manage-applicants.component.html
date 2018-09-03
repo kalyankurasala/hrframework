@@ -249,7 +249,7 @@
 <!--DATA TABLE END-->
 
 <!--APPLICANT MODAL START-->
-<div class="modal fade" bsModal #addApplicantModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+<!-- <div class="modal fade" bsModal #addApplicantModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
@@ -271,7 +271,6 @@
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcName">
                                     <mat-placeholder class="placeholder">Applicant Name</mat-placeholder>
                                 </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="vcName" placeholder="Applicant Name" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -283,7 +282,6 @@
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcPhone">
                                     <mat-placeholder class="placeholder">Phone</mat-placeholder>
                                 </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="vcPhone" placeholder="Phone" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -295,7 +293,6 @@
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcExperience">
                                     <mat-placeholder class="placeholder">Experience (Years)</mat-placeholder>
                                 </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="vcExperience" placeholder="Experience (Years)" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -307,7 +304,6 @@
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcCategory">
                                     <mat-placeholder class="placeholder">Category</mat-placeholder>
                                 </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="vcCategory" placeholder="Category" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -319,7 +315,6 @@
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcJobType">
                                     <mat-placeholder class="placeholder">vcJobType</mat-placeholder>
                                 </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="vcJobType" placeholder="Job Type" /> -->
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -331,7 +326,6 @@
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="dtUpdated">
                                     <mat-placeholder class="placeholder">Updated</mat-placeholder>
                                 </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="dtUpdated" placeholder="Updated" /> -->
                             </div>
                         </div>
 
@@ -353,7 +347,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--APPLICANT MODAL END-->
 <!--DELETE MODAL START-->
 <div class="modal fade" bsModal #deleteApplicantModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
@@ -476,3 +470,104 @@
     </div>
 </div>
 <!--VIEW MODAL END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--APPLICANT MODAL START two colum layout -->
+<div class="modal fade" bsModal #addApplicantModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">
+                    <b style="font-size:17px">Applicant</b>
+                </span>
+                <span>
+                    <a class="pull-right  color-black" (click)="fnAddApplicantModal(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body  container-fluid">
+                    <form [formGroup]="applicantAddEditForm" class="col-lg-12">
+                        <div class="form-group col-lg-6">
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcName">
+                                    <mat-placeholder class="placeholder">Applicant Name</mat-placeholder>
+                                </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="vcName" placeholder="Applicant Name" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcPhone">
+                                    <mat-placeholder class="placeholder">Phone</mat-placeholder>
+                                </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="vcPhone" placeholder="Phone" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcExperience">
+                                    <mat-placeholder class="placeholder">Experience (Years)</mat-placeholder>
+                                </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="vcExperience" placeholder="Experience (Years)" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcCategory">
+                                    <mat-placeholder class="placeholder">Category</mat-placeholder>
+                                </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="vcCategory" placeholder="Category" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcJobType">
+                                    <mat-placeholder class="placeholder">vcJobType</mat-placeholder>
+                                </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="vcJobType" placeholder="Job Type" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="dtUpdated">
+                                    <mat-placeholder class="placeholder">Updated</mat-placeholder>
+                                </mat-form-field>
+                                <!-- <input type="text" class="form-control" formControlName="dtUpdated" placeholder="Updated" /> -->
+                            </div>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <div class="col-lg-12">
+                                <input type="file" class="form-control" formControlName="vcResumePath" placeholder="Resume" />
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" (click)="fnAddApplicantModal(0)">Save</button>
+                <button type="button" class="btn btn-default" (click)="fnAddApplicantModal(0)">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--APPLICANT MODAL END two column layout-->
