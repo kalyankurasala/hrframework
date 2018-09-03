@@ -1,7 +1,10 @@
 export class ManagejobsApplicants {
-    intid:Number;
-    vcJob:string;
-    vcCode:string;
-    vcDescription: string;
-    vcVideoJD: string;
-  }
+  intid: Number;
+  vcPosition: string;
+  vcSkills: string;
+  vcExperience: string;
+  dtTargetDate: string;
+  intPositions: string;
+  vcDescription: string;
+  vcVideoJD: string;
+}

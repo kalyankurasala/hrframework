@@ -17,11 +17,11 @@ export class ManageJobsComponent implements OnInit {
   };
  
  
-  tableList: ManagejobsApplicants[] = [
-    { intid: 1, vcJob: 'PHP', vcCode: ' php1234', vcDescription: 'This is Php', vcVideoJD: ' ' },
-    { intid: 2, vcJob: '.NET', vcCode: '.net2345', vcDescription: 'This is .Net', vcVideoJD: ' ' },
-    { intid: 3, vcJob: 'ANDROID', vcCode: 'and4567', vcDescription: 'This is Android', vcVideoJD: ' ' },
-    { intid: 4, vcJob: 'IOS', vcCode: 'ios0987', vcDescription: 'This is IOS', vcVideoJD: ' ' }
+  tableList: Object[] = [
+    { intid: 1, vcPosition: 'Developer', vcSkills: ' .Net', vcDescription: 'This is .Net Developer', vcVideoJD: ' ',dtTargetDate:'23/09/2018',intPositions:"1/3",vcExperience:'2-4' },
+    { intid: 2, vcPosition: 'Developer', vcSkills: 'Java', vcDescription: 'This is Java Developer', vcVideoJD: ' ',dtTargetDate:'03/10/2018',intPositions:"2/3",vcExperience:'0-2' },
+    { intid: 3, vcPosition: 'Developer', vcSkills: 'Android', vcDescription: 'This is Android Developer', vcVideoJD: ' ',dtTargetDate:'23/09/2018',intPositions:"0/1",vcExperience:'0-1' },
+    { intid: 4, vcPosition: 'Developer', vcSkills: 'PHP', vcDescription: 'This is for PHP Developer', vcVideoJD: ' ',dtTargetDate:'15/09/2018',intPositions:"1/3",vcExperience:'2-3' }
   ];
 
   userEditForm: FormGroup;
