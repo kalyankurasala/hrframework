@@ -138,3 +138,8 @@ hr {
 body{
     font-family: sans-serif !important;
 }
+
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+    z-index: 99999 !important;
+  }
