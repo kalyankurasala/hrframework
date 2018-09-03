@@ -6,6 +6,7 @@ import { ManageJobsComponent } from './manage-jobs/manage-jobs.component';
 import { ModalModule, TooltipModule } from 'ngx-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule, MatDialogModule, MatButtonModule,MatDatepickerModule, MatSliderModule } from '@angular/material';
+import { MatInputModule, MatDialogModule, MatButtonModule,MatDatepickerModule, MatProgressBarModule, MatProgressSpinnerModule } from '@angular/material';
 
 
 @NgModule({
@@ -21,6 +22,8 @@ import { MatInputModule, MatDialogModule, MatButtonModule,MatDatepickerModule, M
     TooltipModule,
     MatDatepickerModule,
     MatSliderModule
+    MatDatepickerModule,MatProgressBarModule, MatProgressSpinnerModule
+    
   ],
   declarations: [ManageApplicantsComponent, ManageJobsComponent],
 })

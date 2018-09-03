@@ -8,20 +8,21 @@
 <!--End f bread crumb -->
 
 
+<!-- Add job button-->
+<div style="margin-bottom:0px;padding: 0;" class="col-sm-12">
+       <a class="btn-circle btn btn-lg bg-blue text-white pull-right" (click)="AddjobModalfn(1)" placement="bottom" tooltip="Add Job"><i
+            class="fa fa-plus"></i></a>
+</div>
+<!-- <div class="col-lg-12"> -->
+    <!-- <button class="btn btn-success pull-right" (click)="AddjobModalfn(1)">
+            <i class="fa fa-plus"></i> Add </button> -->
+<!-- </div> -->
+<!-- Add job button End-->
+
 <div class="row">
-    <!-- Add job button-->
-    <div class="col-lg-12">
-        <button class="btn btn-success pull-right" (click)="AddjobModalfn(1)">
-            <i class="fa fa-plus"></i> Add </button>
-    </div>
-
-
-
-    <!-- Add job button End-->
-
 
     <!-- Table start-->
-    <div class="box-body table-responsive col-lg-12" style="margin-top: 20px;">
+    <div class="box-body table-responsive col-lg-12" style="margin-top: 10px;">
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -60,15 +61,15 @@
 
 
 <!-- Job add edit modal start  -->
-<div class="modal fade" bsModal #addJobModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+<!-- <div class="modal fade" bsModal #addJobModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                    <span class="modal-title">
-                            <b style="font-size:17px">Job</b>
-                        </span>
-                        <span><a class="pull-right  color-black" (click)="AddjobModalfn(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
-                        </span>
+                <span class="modal-title">
+                    <b style="font-size:17px">Job</b>
+                </span>
+                <span><a class="pull-right  color-black" (click)="AddjobModalfn(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </span>
             </div>
             <div class="modal-body">
                 <div class="modal-body  container-fluid">
@@ -78,11 +79,10 @@
                                 <label class="mt" for="Job">Job</label>
                             </div>
                             <div class="col-lg-8">
-                                    <mat-form-field class="example-full-width">
-                                            <input matInput  type="text" autocomplete="off">
-                                            <mat-placeholder class="placeholder">Job</mat-placeholder>
-                                        </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="Job" placeholder="Job" /> -->
+                                <mat-form-field class="example-full-width">
+                                    <input matInput type="text" autocomplete="off">
+                                    <mat-placeholder class="placeholder">Job</mat-placeholder>
+                                </mat-form-field>
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -90,11 +90,10 @@
                                 <label class="mt" for="Code">Code</label>
                             </div>
                             <div class="col-lg-8">
-                                    <mat-form-field class="example-full-width">
-                                            <input matInput  type="text" autocomplete="off">
-                                            <mat-placeholder class="placeholder">Code</mat-placeholder>
-                                        </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="Code" placeholder="code" /> -->
+                                <mat-form-field class="example-full-width">
+                                    <input matInput type="text" autocomplete="off">
+                                    <mat-placeholder class="placeholder">Code</mat-placeholder>
+                                </mat-form-field>
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -102,11 +101,10 @@
                                 <label class="mt" for="Description">Description</label>
                             </div>
                             <div class="col-lg-8">
-                                    <mat-form-field class="example-full-width">
-                                            <input matInput  type="text" autocomplete="off">
-                                            <mat-placeholder class="placeholder">Description</mat-placeholder>
-                                        </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="Description" placeholder="Description" /> -->
+                                <mat-form-field class="example-full-width">
+                                    <input matInput type="text" autocomplete="off">
+                                    <mat-placeholder class="placeholder">Description</mat-placeholder>
+                                </mat-form-field>
                             </div>
                         </div>
                         <div class="form-group col-lg-12">
@@ -114,11 +112,10 @@
                                 <label class="mt" for="VideoJD">Video JD </label>
                             </div>
                             <div class="col-lg-8">
-                                    <mat-form-field class="example-full-width">
-                                            <input matInput  type="text" autocomplete="off">
-                                            <mat-placeholder class="placeholder">Video JD Link</mat-placeholder>
-                                        </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="VideoJD" placeholder="Video JD Link" /> -->
+                                <mat-form-field class="example-full-width">
+                                    <input matInput type="text" autocomplete="off">
+                                    <mat-placeholder class="placeholder">Video JD Link</mat-placeholder>
+                                </mat-form-field>
                             </div>
                         </div>
                     </form>
@@ -130,7 +127,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Job add edit modal End-->
 
@@ -140,10 +137,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="modal-title">
-                        <b style="font-size:17px">Delete Job</b>
-                    </span>
-                    <span><a class="pull-right  color-black" (click)="jobDeleteModal(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
-                    </span>
+                    <b style="font-size:17px">Delete Job</b>
+                </span>
+                <span><a class="pull-right  color-black" (click)="jobDeleteModal(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </span>
             </div>
             <div class="modal-body  container-fluid">
                 <p>&nbsp;&nbsp; Are you sure you want to delete?</p>
@@ -167,29 +164,61 @@
 
 
 
-
-
-
-
-<!--testing-->
-<!-- <button type="button" class="btn btn-primary" (click)="openModal(template)">Open modal</button>
-<br>
-<br>
-<button type="button" class="btn btn-primary btn-sm" (click)="config.ignoreBackdropClick = !config.ignoreBackdropClick">{{!config.ignoreBackdropClick
-    ? 'Disable' : 'Enable'}} backdrop click</button>
-
-<ng-template #template>
-    <div class="modal-header">
-        <h4 class="modal-title pull-left">Modal</h4>
-        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-            <span aria-hidden="true">&times;</span>
-        </button>
+<!-- Job add testing edit modal start  -->
+<div class="modal fade" bsModal #addJobModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">
+                        <b style="font-size:17px">Job</b>
+                    </span>
+                    <span><a class="pull-right  color-black" (click)="AddjobModalfn(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body  container-fluid">
+                        <form [formGroup]="userEditForm" class="col-lg-12">
+                            <div class="form-group col-lg-6">
+                                <div class="col-lg-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput type="text" autocomplete="off">
+                                        <mat-placeholder class="placeholder">Job</mat-placeholder>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <div class="col-lg-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput type="text" autocomplete="off">
+                                        <mat-placeholder class="placeholder">Code</mat-placeholder>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <div class="col-lg-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput type="text" autocomplete="off">
+                                        <mat-placeholder class="placeholder">Description</mat-placeholder>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <div class="col-lg-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput type="text" autocomplete="off">
+                                        <mat-placeholder class="placeholder">Video JD Link</mat-placeholder>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" (click)="AddjobModalfn(0)">Save</button>
+                    <button type="button" class="btn btn-default" (click)="AddjobModalfn(0)">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="modal-body">
-        <p>Are you sure you want to delete?</p>
-    </div>
-    <div class="modal-footer">
-        <button type="submit" class="btn btn-success" (click)="jobDeleteModal(0)">Confirm</button>
-        <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
-    </div>
-</ng-template> -->
+    
+    <!-- Job add edit modal End-->

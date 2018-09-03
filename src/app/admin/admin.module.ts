@@ -16,6 +16,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RatingModule} from "ngx-rating";
 import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,MatSelectModule, MatSliderModule } from '@angular/material';
+import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,MatSelectModule, MatProgressBarModule, MatProgressSpinnerModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,Ma
     MatSelectModule,
     MatDatepickerModule,
     MatSliderModule
+    MatDatepickerModule,MatProgressBarModule, MatProgressSpinnerModule
   ],
   declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
      AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
