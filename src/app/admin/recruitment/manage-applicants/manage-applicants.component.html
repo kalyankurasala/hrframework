@@ -190,43 +190,64 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                             <tr class="tr-grid-header">
-                                <th>Applicant</th>
+                                <th>Name</th>
+                                <th>Email</th>
                                 <th>Phone</th>
+                                <th>Position</th>
+                                <th>Skills</th>
+                                <th>HR Recruiter</th>
                                 <th style="text-align: center">Experience</th>
-                                <th>Category</th>
-                                <th>Job Type</th>
-                                <th style="text-align: center">ATS</th>
-                                <th style="text-align: center">Updated</th>
+                                <th>Referral</th>
                                 <th style="text-align: center">Profile</th>
-                                <th style="text-align: center">Resume</th>
+                                <th>Process</th>
+                                <th>IQ</th>
+                                <th style="text-align: center">ATS</th>
+
+
+                                <!-- <th>Category</th>
+                                <th>Job Type</th>
+                                <th style="text-align: center">Updated</th>
+                                <th style="text-align: center">Resume</th> -->
                                 <th style="text-align: center;">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let applicant of tableList">
                                 <td>{{applicant.vcName}}</td>
+                                <td>{{applicant.vcEmail}}</td>
                                 <td>{{applicant.vcPhone}}</td>
+                                <td>{{applicant.vcPosition}}</td>
+                                <td>{{applicant.vcSkills}}</td>
+                                <td>{{applicant.vcHRRecruiter}}</td>
                                 <td>{{applicant.vcExperience}}</td>
-                                <td>{{applicant.vcCategory}}</td>
-                                <td>{{applicant.vcJobType}}</td>
+                                <td>{{applicant.vcReferral}}</td>
+                                <td style="text-align: center">
+                                    <a data-toggle="modal" (click)="fnviewModalModal(1)" style="cursor: pointer;">View</a>
+                                </td>
+                                <td>{{applicant.vcProcess}}</td>
+                                <td>{{applicant.intIQ}}</td>
                                 <td style="text-align: center">
                                     <a [routerLink]="['/admin/ats']" target="_blank">
                                         <i class="fa fa-external-link-square"></i>
                                     </a>
                                 </td>
+
+
+
+                                <!-- <td>{{applicant.vcCategory}}</td>
+                                <td>{{applicant.vcJobType}}</td>
+
                                 <td style="text-align: center">02-07-2016</td>
-                                <td style="text-align: center">
-                                    <a data-toggle="modal" (click)="fnviewModalModal(1)" style="cursor: pointer;">View</a>
-                                </td>
+
                                 <td style="text-align: center">
                                     <a href="http://edj.optionmatrix.org/images/applicant_resume/8264886-24437043-abcd.doc">
                                         <i class="glyphicon glyphicon-file"></i>
                                     </a>
-                                </td>
+                                </td> -->
                                 <td style="text-align: center">
-                                    <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
+                                    <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
                                         <i class="fa fa-envelope"></i>
-                                    </a>
+                                    </a> -->
                                     <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;" (click)="fnAddApplicantModal(1)">
                                         <i class="fa fa-edit"></i>
                                     </a>
@@ -434,9 +455,9 @@
                                                             </tr>
                                                             <tr class="ng-tns-c8-20">
                                                                 <th class="ng-tns-c8-20" scope="row">Mobile Number</th>
-                                                                <td class="ng-tns-c8-20">(0123) - 4567891</td>
+                                                                <td class="ng-tns-c8-20"> 9541234578 </td>
                                                             </tr>
-                                                            <tr class="ng-tns-c8-20">
+                                                            <!-- <tr class="ng-tns-c8-20">
                                                                 <th class="ng-tns-c8-20" scope="row">Twitter</th>
                                                                 <td class="ng-tns-c8-20">@codedthemes</td>
                                                             </tr>
@@ -449,7 +470,7 @@
                                                                 <td class="ng-tns-c8-20">
                                                                     <a class="ng-tns-c8-20" href="javascript:;">www.demo.com</a>
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                         </tbody>
                                                     </table>
                                                 </div>
