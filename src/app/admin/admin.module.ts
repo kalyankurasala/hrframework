@@ -15,7 +15,7 @@ import { AtsTimelineComponent } from './recruitment/recruitment-ats/ats-timeline
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RatingModule} from "ngx-rating";
-import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,MatSelectModule } from '@angular/material';
+import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,MatSelectModule, MatSliderModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -31,7 +31,8 @@ import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,Ma
     ModalModule,
     MatInputModule,
     MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSliderModule
   ],
   declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
      AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
