@@ -14,6 +14,8 @@ export class AtsTimelineComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  selectedValue: number ;
   constructor() { }
   fnAddModal(flag) {
     if (flag == 1) {
@@ -30,5 +32,10 @@ export class AtsTimelineComponent implements OnInit {
     else {
       this.deleteModal.hide();
     }
+  }
+
+  fntesting(flag){
+    console.log(flag);
+    this.selectedValue = flag;
   }
 }

@@ -31,4 +31,6 @@
     display: none !important;
 }
 
-
+/* ::ng-deep thead.mat-calendar-table-header {
+    background-color:#fff !important;
+} */

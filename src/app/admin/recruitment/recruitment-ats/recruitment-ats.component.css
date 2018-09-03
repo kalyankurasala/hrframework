@@ -560,7 +560,7 @@ p{
 }
 
 .wrap-content {
-	color:#eee;
+	color:#fff;
     text-overflow: ellipsis;
     /* overflow: hidden; */
     display: inline-block;
@@ -568,7 +568,23 @@ p{
     /* width: 70px; */
 }
 
+.iq-box {
+    background-color: #1a69c5;
+    height: 150px;
+    border-radius: 3%;
+    box-shadow: 2px 2px 0px 0px #444c583b;
+}
+
 
 ::ng-deep .mat-progress-bar-fill::after {
-    background-color: #1eb63a;
+	background-color: #1eb63a;
+}
+
+::ng-deep .mat-progress-bar {
+    display: block;
+    height: 7px !important;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 250ms linear;
+    width: 114% !important;
 }
