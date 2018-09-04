@@ -1,91 +1,3 @@
-<div class="card-body hide">
-
-    <ul class="timeline">
-        <li>
-            <div class="timeline-badge"><i class="fas fa-user-tie font_awesome_timeline"></i>
-            </div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">Initail HR &nbsp;&nbsp;<a class="pull-right red" (click)="fnDeleteModal(1)"><i
-                                class="fa fa-trash-o"></i></a><a class="pull-right" (click)="fnAddModal(1,1)"><i class="fa fa-pencil"></i></a>
-                    </h4>
-                    <hr>
-                </div>
-                <div class="timeline-body">
-                    <p> Candidate is excellent with IQ more than 115. Meets most of our benchmarks. </p>
-                </div>
-            </div>
-        </li>
-        <li class="timeline-inverted">
-            <div class="timeline-badge warning"><i class="fa fa-lightbulb font_awesome_timeline" style="font-size:30px;"></i>
-            </div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">IQ test &nbsp;&nbsp;<a class="pull-right red" (click)="fnDeleteModal(1)"><i
-                                class="fa fa-trash-o"></i></a><a class="pull-right" (click)="fnAddModal(1,2)"><i class="fa fa-pencil"></i></a></h4>
-                    <hr>
-                </div>
-                <div class="timeline-body">
-                    <p>Total : 110</p>
-                    <p>Analytical : 100</p>
-                    <p>Logical: 107</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="timeline-badge danger"><i class="fas fa-pencil-alt font_awesome_timeline"></i>
-            </div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">First Validation &nbsp;&nbsp;
-                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
-                        <a class="pull-right" (click)="fnAddModal(1,3)"><i class="fa fa-pencil"></i></a></h4>
-                    <hr>
-                </div>
-                <div class="timeline-body">
-                    <p>Confidence : 4 / 5 </p>
-                    <p>Communication : 2.5 / 5 </p>
-                </div>
-            </div>
-        </li>
-        <li class="timeline-inverted">
-            <div class="timeline-badge danger"><i class="fas fa-pencil-alt font_awesome_timeline"></i>
-            </div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">Second Validation &nbsp;&nbsp;
-                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
-                        <a class="pull-right" (click)="fnAddModal(1,4)"><i class="fa fa-pencil"></i></a></h4>
-                    <hr>
-                </div>
-                <div class="timeline-body">
-                    <p>Confidence : 3 / 5 </p>
-                    <p>Communication : 3.5 / 5 </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
-            </div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">HR Manager Round &nbsp;&nbsp;
-                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
-                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
-                    <hr>
-                </div>
-                <div class="timeline-body">
-                    <p>Bond : Ok </p>
-                </div>
-            </div>
-        </li>
-    </ul>
-
-</div>
-
-
-
-
 <!-- all single side -->
 
 <div class="card-body" id="test">
@@ -102,6 +14,31 @@
                 </div>
                 <div class="timeline-body">
                     <p> Candidate is excellent with IQ more than 115. Meets most of our benchmarks. </p>
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; HR Check List
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+                    <div class="col-sm-5">
+                        <p>Smoking <span class=" pull-right"> <i class="fas fa-times-circle fa-red"></i></span></p>
+                        <p> Drinking <span class=" pull-right"> <i class="fas fa-times-circle fa-red"></i></span></p>
+                        <p> Dancing <span class=" pull-right"> <i class="fas fa-check-circle fa-green "></i></span></p>
+                    </div>
+                    <div class="col-sm-offset-1 col-sm-5">
+                        <p> Singing <span class=" pull-right"> <i class="fas fa-check-circle fa-green "></i></span></p>
+                        <p>Drawing <span class=" pull-right"> <i class="fas fa-check-circle fa-green "></i></span>
+                        </p>
+                        <p> Literature <span class=" pull-right"> <i class="fas fa-times-circle fa-red"></i></span></p>
+                    </div>
                 </div>
             </div>
         </li>
@@ -122,6 +59,28 @@
                 </div>
             </div>
         </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Fitness Metric
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+                    <div class="col-sm-6">
+                        <p>Height <span class=" pull-right"> &nbsp;&nbsp;173 cm <i class="fas fa-check-circle fa-green "></i></span></p>
+                        <p> Weight <span class=" pull-right">&nbsp;&nbsp;52.9 kg <i class="fas fa-exclamation-circle fa-yellow "></i></span></p>
+                        <p> BP <span class=" pull-right"> &nbsp;&nbsp; 118/78<i class="fas fa-check-circle fa-green "></i></span></p>
+                        <p> Pulse <span class=" pull-right"> &nbsp;&nbsp; 80<i class="fas fa-check-circle fa-green "></i></span></p>
+                        <p> BMI <span class=" pull-right"> &nbsp;&nbsp; 12.5 <i class="fas fa-times-circle red"></i></span></p>
+                        <p> FAT % <span class=" pull-right"> &nbsp;&nbsp; 12.2<i class="fas fa-check-circle fa-green "></i></span></p>
+                    </div>
+                </div>
+            </div>
+        </li>
         <li class="timeline-inverted">
             <div class="timeline-badge danger"><i class="fas fa-pencil-alt font_awesome_timeline"></i>
             </div>
@@ -133,7 +92,7 @@
                     <hr>
                 </div>
                 <div class="timeline-body">
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <p>Energy Level <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p> Communication <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p> Maturity <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
@@ -143,7 +102,7 @@
                         <p> Artistic Talent <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
 
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <p> Passion <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p> Fitness & style <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span>
                         </p>
@@ -153,7 +112,7 @@
                         <p>Subject expertise <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p>Relevant Experience <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-2 hide">
                         <circle-progress class="pull-right" [percent]="75" [radius]="25" [outerStrokeWidth]="4" [innerStrokeWidth]="false" [outerStrokeColor]="'#78C000'"
                             [innerStrokeColor]="'#C7E596'" [titleColor]="'#78C000'" [showInnerStroke]="'true'" [showSubtitle]="false"
                             [showUnits]="false" [animation]="true" [animationDuration]="300"></circle-progress>
@@ -172,7 +131,7 @@
                     <hr>
                 </div>
                 <div class="timeline-body">
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <p>Energy Level <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p> Communication <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p> Maturity <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
@@ -182,7 +141,7 @@
                         <p> Artistic Talent <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
 
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <p> Passion <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p> Fitness & style <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span>
                         </p>
@@ -192,7 +151,7 @@
                         <p>Subject expertise <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                         <p>Relevant Experience <span class=" pull-right"> 3 <i class="fas fa-check-circle fa-green "></i></span></p>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-2 hide">
                         <circle-progress class="pull-right" [percent]="55" [radius]="25" [outerStrokeWidth]="4" [innerStrokeWidth]="false" [outerStrokeColor]="'#78C000'"
                             [innerStrokeColor]="'#C7E596'" [titleColor]="'#78C000'" [showInnerStroke]="'true'" [showSubtitle]="false"
                             [showUnits]="false" [animation]="true" [animationDuration]="300"></circle-progress>
@@ -200,7 +159,7 @@
                 </div>
             </div>
         </li>
-        <li class="timeline-inverted hide">
+        <li class="timeline-inverted">
             <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
             </div>
             <div class="timeline-panel">
@@ -212,6 +171,201 @@
                 </div>
                 <div class="timeline-body">
                     <p>Bond : Ok </p>
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Final Interview
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Waiting List
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Offer approval
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Reference Check
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Offer Letter
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Employee confirmation
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Fitness Test
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp;Document Upload
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Office Visit
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Team Intro
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Induction
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Certification
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
+                </div>
+            </div>
+        </li>
+        <li class="timeline-inverted ">
+            <div class="timeline-badge info"><i class="fas fa-user-tie font_awesome_timeline"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">&nbsp;&nbsp; Probation
+                        <a class="pull-right red" (click)="fnDeleteModal(1)"><i class="fa fa-trash-o"></i></a>
+                        <a class="pull-right" (click)="fnAddModal(1,5)"><i class="fa fa-pencil"></i></a></h4>
+                    <hr>
+                </div>
+                <div class="timeline-body">
+
                 </div>
             </div>
         </li>
@@ -298,7 +452,7 @@
 
                         <div class="form-group col-lg-12">
                             <div class="col-lg-3" style="margin-top:15px;">
-                                <label class="mt" for="vcName">Uplaod:</label>
+                                <label class="mt" for="vcName">Upload:</label>
                             </div>
                             <div class="col-lg-9">
                                 <input type="file" class="form-control">

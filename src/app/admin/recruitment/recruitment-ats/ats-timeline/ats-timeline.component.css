@@ -6,7 +6,7 @@
   .timeline:before {
     content: " ";
     position: absolute;
-    top: 0;
+    top: 50px;
     bottom: 0;
     left: 50%;
     width: 3px;
@@ -197,4 +197,8 @@
 
   .fa-yellow{
     color: goldenrod;
+  }
+
+  .fa-red{
+    color: red;
   }
