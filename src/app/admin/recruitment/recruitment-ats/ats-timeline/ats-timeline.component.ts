@@ -2,11 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
 
 
-export interface process {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-ats-timeline',
   templateUrl: './ats-timeline.component.html',
@@ -21,25 +16,15 @@ export class AtsTimelineComponent implements OnInit {
 
   }
 
-  selectedValue: number ;
-
-
-
-
+  selectedValue: number;
+  selected: 1;
   constructor() { }
-  
-  DDprocess: process[] = [
-    {value: '1', viewValue: 'Initial HR round'},
-    {value: '2', viewValue: 'IQ Test'},
-    {value: '3', viewValue: 'First Validation'},
-    {value: '4', viewValue: 'Second Validation'}
-  ];
-  
-  
-  fnAddModal(flag,flag2) {
+
+
+  fnAddModal(flag, flag2) {
     if (flag == 1) {
-      this.selectedValue=flag2;
       this.addModal.show();
+      this.selected = flag2;
     }
     else {
       this.addModal.hide();
@@ -54,8 +39,7 @@ export class AtsTimelineComponent implements OnInit {
     }
   }
 
-  fntesting(flag){
-    console.log(flag);
-    this.selectedValue = flag;
+  fntesting(flag) {
+    this.selected = flag;
   }
 }
