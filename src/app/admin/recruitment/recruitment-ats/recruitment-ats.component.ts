@@ -10,6 +10,7 @@ export class RecruitmentAtsComponent implements OnInit {
   @ViewChild('addModal') public addModal: ModalDirective;
   starsCount: number=2;
   starsCounts: number[] = [];
+  selectedValue: number=1;
 
 
   constructor() { }
@@ -29,6 +30,9 @@ export class RecruitmentAtsComponent implements OnInit {
       this.addModal.hide();
     }
   }
-
+  fntesting(flag){
+    console.log(flag);
+    this.selectedValue = flag;
+  }
 
 }

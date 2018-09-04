@@ -581,6 +581,7 @@ p{
 }
 
 ::ng-deep .mat-progress-bar {
+	border-radius: 3px;
     display: block;
     height: 7px !important;
     overflow: hidden;
