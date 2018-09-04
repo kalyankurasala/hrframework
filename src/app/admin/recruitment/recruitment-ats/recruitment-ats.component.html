@@ -687,6 +687,7 @@
     </div>
     <div id="div_ReferenceCheck" class="box_shadow padding-10 m-tb-20">
       <div class="col-sm-12">
+
         <div class="col-sm-12">
           <h4><strong> Reference Check &nbsp;&nbsp;</strong><a (click)="fnAddModal(1)"><i class="fa fa-pencil fa-lg "></i></a></h4>
           <b>
@@ -1261,8 +1262,8 @@
             </div>
           </div>
           <!--SECOND VALIDATION END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 5">
+          <!-- HR manager ROUND START-->
+          <div *ngIf="selectedValue == 5">
 
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
@@ -1279,9 +1280,9 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 6">
+          <!-- HR manager ROUND END-->
+          <!--Final interview START-->
+          <div *ngIf="selectedValue == 6">
 
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
@@ -1298,9 +1299,9 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 7">
+          <!--Final interview END-->
+          <!--Waiting list START-->
+          <div *ngIf="selectedValue == 7">
 
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
@@ -1317,73 +1318,75 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 8">
+          <!--Waiting lisit END-->
+          <!--Reference check START-->
+          <div *ngIf="selectedValue == 8">
             <div class="col-sm-6">
+              <h4 style="margin-left:28px;">Reference 1</h4>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
 
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Name">
-                    </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Name">
+                  </mat-form-field>
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
 
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Company">
-                    </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Company">
+                  </mat-form-field>
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
 
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Email">
-                    </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Email">
+                  </mat-form-field>
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
 
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Phone">
-                    </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Phone">
+                  </mat-form-field>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
+              <h4 style="margin-left:28px;">Reference 2</h4>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
 
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Name">
-                    </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Name">
+                  </mat-form-field>
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
 
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Company">
-                    </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Company">
+                  </mat-form-field>
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
 
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Email">
-                    </mat-form-field>
-                  </div>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Email">
+                  </mat-form-field>
+                </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group col-lg-12">
-                    <mat-form-field class="example-full-width">
-                      <input type="text" matInput placeholder="Phone">
-                    </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="Phone">
+                  </mat-form-field>
                 </div>
               </div>
             </div>
@@ -1402,9 +1405,9 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 9">
+          <!--Reference check END-->
+          <!--offer letter START-->
+          <div *ngIf="selectedValue == 9">
 
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
@@ -1442,9 +1445,9 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 10">
+          <!--offer letter END-->
+          <!--Employee confirmation START-->
+          <div *ngIf="selectedValue == 10">
 
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
@@ -1461,9 +1464,9 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 11">
+          <!--Employee confirmation END-->
+          <!--office visit START-->
+          <div *ngIf="selectedValue == 11">
 
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
@@ -1481,7 +1484,7 @@
             </div>
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
-<div class="col-sm-3"></div>
+                <div class="col-sm-3"></div>
                 <div class="col-lg-9">
                   <mat-form-field class="example-full-width">
                     <input type="text" matInput placeholder="Joining Date (Expected)">
@@ -1490,9 +1493,9 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
-          <div id="initial-hr-round" *ngIf="selectedValue == 12">
+          <!--Office visit END-->
+          <!--Team Intro START-->
+          <div *ngIf="selectedValue == 12">
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
                 <div class="col-lg-3" style="margin-top:15px;">
@@ -1521,8 +1524,8 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
+          <!--Team Intro END-->
+          <!--Induction START-->
           <div *ngIf="selectedValue == 13">
 
             <div class="col-lg-12">
@@ -1540,8 +1543,8 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
-          <!--INITIAL HR ROUND START-->
+          <!--INductionEND-->
+          <!--certification START-->
           <div *ngIf="selectedValue == 14">
             <div class="col-lg-12">
               <div class="form-group col-lg-12">
@@ -1571,7 +1574,7 @@
               </div>
             </div>
           </div>
-          <!--INITIAL HR ROUND END-->
+          <!--Certification END-->
           <!--Probation START-->
           <div *ngIf="selectedValue == 15">
             <div class="col-lg-12">
