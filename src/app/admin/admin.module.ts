@@ -16,6 +16,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RatingModule} from "ngx-rating";
 import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,MatSelectModule, MatProgressBarModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   imports: [
@@ -34,7 +35,16 @@ import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,Ma
     MatSliderModule,
     MatDatepickerModule,
     MatProgressBarModule, 
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300
+    })
   ],
   declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
      AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],

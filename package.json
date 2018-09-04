@@ -29,6 +29,7 @@
     "angular2-datatable": "^0.6.0",
     "core-js": "^2.5.4",
     "highcharts": "^6.1.1",
+    "ng-circle-progress": "^1.2.0",
     "ngx-bootstrap": "^3.0.1",
     "ngx-rating": "0.0.9",
     "primeicons": "^1.0.0-beta.10",
