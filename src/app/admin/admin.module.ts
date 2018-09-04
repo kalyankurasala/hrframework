@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RatingModule} from "ngx-rating";
 import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,MatSelectModule, MatProgressBarModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { AdministrationLayoutComponent } from './administration/administration-layout/administration-layout.component';
 
 @NgModule({
   imports: [
@@ -46,7 +47,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       animationDuration: 300
     })
   ],
-  declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,
+  declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,AdministrationLayoutComponent,
      AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
 
 })
