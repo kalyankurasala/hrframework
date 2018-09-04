@@ -1,0 +1,36 @@
+<!-- BEGIN PAGE CONTENT INNER -->
+<div class="portlet light">
+  <div class="portlet-body">
+    <div class="row">
+
+      <div class="col-md-3">
+        <ul class="ver-inline-menu tabbable margin-bottom-10">
+          <li [routerLinkActive]="['active']">
+            <a [routerLink]="['users']">
+              <i class="fa fa-plus"></i> Users</a>
+            <span class="after">
+            </span>
+          </li>
+          <li [routerLinkActive]="['active']">
+            <a [routerLink]="['skills']">
+              <i class="fa fa-plus"></i> Skills </a>
+          </li>
+          <li [routerLinkActive]="['active']">
+            <a [routerLink]="['positions']">
+              <i class="fa fa-plus"></i> Positions </a>
+          </li>
+          <li [routerLinkActive]="['active']">
+            <a [routerLink]="['validations']">
+              <i class="fa fa-plus"></i> Validations </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- END PAGE CONTENT INNER -->

@@ -9,11 +9,13 @@ import { AlignmentLayoutComponent } from './alignment/alignment-layout/alignment
 import { AluminiLayoutComponent } from './alumini/alumini-layout/alumini-layout.component';
 import { CultureComponent } from './culture/culture/culture.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { AdministrationLayoutComponent } from './administration/administration-layout/administration-layout.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: AdminDashboardComponent },
   { path: 'ats', component: RecruitmentAtsComponent },
   { path: 'recruitment', component: RecruitmentLayoutComponent,loadChildren:'./recruitment/recruitment.module#RecruitmentModule'},
+  { path: 'administration', component: AdministrationLayoutComponent,loadChildren:'./administration/administration.module#AdministrationModule'},
   { path: 'alignment', component: AlignmentLayoutComponent},
   { path: 'alumini', component: AluminiLayoutComponent},
   { path: 'culture', component: CultureComponent},
