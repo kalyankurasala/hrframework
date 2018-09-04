@@ -7,16 +7,10 @@
 </div>
 <!--End f bread crumb -->
 <!--Add and Filter BUTTON START-->
-<div style="margin-bottom:10px;padding: 0;" class="col-sm-12">
-  <a class="btn-circle btn btn-lg bg-dark-teal text-white pull-right" tooltip="Filter" placement="bottom" (click)="shouldShow = !shouldShow"><i
-          class="fa fa-filter"></i></a>
 
-  <a class="btn-circle btn btn-lg bg-blue text-white pull-right" (click)="fnAddApplicantModal(1)" placement="bottom" tooltip="Add Applicant"><i
-          class="fa fa-plus"></i></a>
-</div>
 <!--Add and Filter BUTTON END-->
 <!--DATATABLE START-->
-<div class="">
+<div class="hide">
   <div class="col-xs-12 panel-0">
       <div class="row">
           <div class="box">
@@ -47,51 +41,7 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr *ngFor="let applicant of tableList">
-                              <td>{{applicant.vcName}}</td>
-                              <td>{{applicant.vcEmail}}</td>
-                              <td>{{applicant.vcPhone}}</td>
-                              <td>{{applicant.vcPosition}}</td>
-                              <td>{{applicant.vcSkills}}</td>
-                              <td>{{applicant.vcHRRecruiter}}</td>
-                              <td>{{applicant.vcExperience}}</td>
-                              <td>{{applicant.vcReferral}}</td>
-                              <td style="text-align: center">
-                                  <a data-toggle="modal" (click)="fnviewModalModal(1)" style="cursor: pointer;">View</a>
-                              </td>
-                              <td>{{applicant.vcProcess}}</td>
-                              <td>{{applicant.intIQ}}</td>
-                              <td style="text-align: center">
-                                  <a [routerLink]="['/admin/ats']" target="_blank">
-                                      <i class="fa fa-external-link-square"></i>
-                                  </a>
-                              </td>
-
-
-
-                              <!-- <td>{{applicant.vcCategory}}</td>
-                              <td>{{applicant.vcJobType}}</td>
-
-                              <td style="text-align: center">02-07-2016</td>
-
-                              <td style="text-align: center">
-                                  <a href="http://edj.optionmatrix.org/images/applicant_resume/8264886-24437043-abcd.doc">
-                                      <i class="glyphicon glyphicon-file"></i>
-                                  </a>
-                              </td> -->
-                              <td style="text-align: center">
-                                  <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
-                                      <i class="fa fa-envelope"></i>
-                                  </a> -->
-                                  <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;" (click)="fnAddApplicantModal(1)">
-                                      <i class="fa fa-edit"></i>
-                                  </a>
-                                  <a (click)="fnApplicantDeleteModal(1)">
-                                      <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-trash red"></i>
-                                  </a>
-                              </td>
-
-                          </tr>
+                        
                       </tbody>
                   </table>
               </div>
