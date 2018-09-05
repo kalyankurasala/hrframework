@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
-
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-ats-timeline',
@@ -9,16 +9,27 @@ import { ModalDirective } from 'ngx-bootstrap';
 })
 export class AtsTimelineComponent implements OnInit {
 
-
   @ViewChild('deleteModal') public deleteModal: ModalDirective;
   @ViewChild('addModal') public addModal: ModalDirective;
   ngOnInit() {
-
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+    this.thirdFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
 
   selectedValue: number;
   selected: 1;
-  constructor() { }
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+   thirdFormGroup: FormGroup;
+
+  constructor(private _formBuilder: FormBuilder) {}
 
 
   fnAddModal(flag, flag2) {
@@ -41,5 +52,6 @@ export class AtsTimelineComponent implements OnInit {
 
   fntesting(flag) {
     this.selected = flag;
+    console.log(this.selected);
   }
 }
