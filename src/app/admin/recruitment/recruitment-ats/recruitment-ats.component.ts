@@ -8,31 +8,29 @@ import { ModalDirective } from '../../../../../node_modules/ngx-bootstrap';
 export class RecruitmentAtsComponent implements OnInit {
 
   @ViewChild('addModal') public addModal: ModalDirective;
-  starsCount: number=2;
-  starsCounts: number[] = [];
-  selectedValue: number=1;
+  selected: number = 1;
 
 
   constructor() { }
 
   ngOnInit() {
-  }
+    }
   feedBackChange(e) {
 
     console.log(e)
   }
 
-  fnAddModal(flag) {
+  fnAddModal(flag,flag2) {
     if (flag == 1) {
       this.addModal.show();
+      this.selected = flag2;
     }
     else {
       this.addModal.hide();
     }
   }
-  fntesting(flag){
-    console.log(flag);
-    this.selectedValue = flag;
+  fntesting(flag) {
+    this.selected = flag;
   }
 
 }

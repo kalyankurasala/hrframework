@@ -11,6 +11,7 @@ export class AtsTimelineComponent implements OnInit {
 
   @ViewChild('deleteModal') public deleteModal: ModalDirective;
   @ViewChild('addModal') public addModal: ModalDirective;
+  
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
@@ -24,7 +25,7 @@ export class AtsTimelineComponent implements OnInit {
   }
 
   selectedValue: number;
-  selected: 1;
+  selected:number;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
    thirdFormGroup: FormGroup;
@@ -52,6 +53,5 @@ export class AtsTimelineComponent implements OnInit {
 
   fntesting(flag) {
     this.selected = flag;
-    console.log(this.selected);
   }
 }

@@ -589,3 +589,13 @@ p{
     transition: opacity 250ms linear;
     width: 114% !important;
 }
+
+
+
+::ng-deep .mat-horizontal-stepper-header-container{
+    margin-left: 9% ;
+  }
+
+  ::ng-deep .mat-horizontal-content-container{
+    padding: 0px;
+  }

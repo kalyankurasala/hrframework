@@ -252,7 +252,7 @@
                 <span style="font-size: 21px;"><b> Process</b></span>
 
                 <span class="pull-right" style="margin-top: 8px;">
-                    <a (click)="fnAddModal(1)" style="font-weight:bold;text-decoration: none;">Update</a>
+                    <a (click)="fnAddModal(1,1)" style="font-weight:bold;text-decoration: none;">Update</a>
                 </span>
                 <hr>
             </div>
@@ -824,8 +824,6 @@
 
 
 
-
-
 <!--ADD MODAL START-->
 <div class="modal fade" bsModal #addModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
     <div class="modal-dialog modal-md">
@@ -834,97 +832,204 @@
                 <span class="modal-title">
                     <b style="font-size:17px">Process Update</b>
                 </span>
-                <span><a class="pull-right color-black" (click)="fnAddModal(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <span><a class="pull-right color-black" (click)="fnAddModal(0,1)"><i class="fa fa-times" aria-hidden="true"></i></a>
                 </span>
             </div>
             <div class="modal-body" style="overflow-y: scroll;max-height: 450px;">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group col-lg-12">
-                            <div class="col-lg-3" style="margin-top:5px;">
-                                <label class="mt" for="vcName">Select Process:</label>
+                            <div class="col-lg-3" style="margin-top: 14px;">
+                                <label class="mt">Select Process:</label>
                             </div>
                             <div class="col-lg-9">
-                                <select class="form-control" (change)="fntesting($event.target.value)">
-                                    <option value="1">Initial HR Round</option>
-                                    <option value="2">IQ Test</option>
-                                    <option value="3">First Validation</option>
-                                    <option value="4">Second Validation</option>
-                                    <option value="5">HR Manager Round</option>
-                                    <option value="6">Final Interview</option>
-                                    <option value="7">Waiting List</option>
-                                    <option value="8">Reference Check</option>
-                                    <option value="9">Offer Letter</option>
-                                    <option value="10">Employee Confirmation</option>
-                                    <option value="11">Office visit</option>
-                                    <option value="12">Team Intro</option>
-                                    <option value="13">Induction</option>
-                                    <option value="14">Certification</option>
-                                    <option value="15">Probation</option>
-                                </select>
+                                <mat-form-field>
+                                    <mat-select value="{{selected}}" (selectionChange)="fntesting($event.value)" placeholder="Select">
+                                        <mat-option value="1"> Initial HR Round </mat-option>
+                                        <mat-option value="2"> HR Check List</mat-option>
+                                        <mat-option value="3"> IQ Test </mat-option>
+                                        <mat-option value="4"> Fitness Metric </mat-option>
+                                        <mat-option value="5"> First Validation </mat-option>
+                                        <mat-option value="6"> Second Validation </mat-option>
+                                        <mat-option value="7"> HR Manager Round </mat-option>
+                                        <mat-option value="8"> Final Interview </mat-option>
+                                        <mat-option value="9"> Waiting List </mat-option>
+                                        <mat-option value="10"> Offer Approval</mat-option>
+                                        <mat-option value="11"> Reference Check </mat-option>
+                                        <mat-option value="12"> Offer Letter</mat-option>
+                                        <mat-option value="13">Employer Confirmation </mat-option>
+                                        <mat-option value="14">Fitness Test </mat-option>
+                                        <mat-option value="15"> Document Upload </mat-option>
+                                        <mat-option value="16"> Office Visit </mat-option>
+                                        <mat-option value="17"> Team Intro</mat-option>
+                                        <mat-option value="18"> Induction </mat-option>
+                                        <mat-option value="19"> Certification </mat-option>
+                                        <mat-option value="20"> Probation </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
                             </div>
                         </div>
 
                     </div>
 
                     <!--INITIAL HR ROUND START-->
-                    <div id="initial-hr-round" *ngIf="selectedValue == 1">
+                    <div *ngIf="selected == 1">
 
                         <div class="col-lg-12">
-                            <div class="form-group col-lg-12">
+                            <div class="col-lg-12">
                                 <div class="col-lg-3" style="margin-top:5px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Rejected</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--INITIAL HR ROUND END-->
+                    <!--HR CHECK LIST START-->
+                    <div *ngIf="selected == 2">
+
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:5px;">
+                                    <label class="mt">Drinking:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-slide-toggle></mat-slide-toggle>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="col-lg-12">
+                                <div class=" col-lg-3" style="margin-top:5px;">
+                                    <label class="mt">Smoking:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-slide-toggle></mat-slide-toggle>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:5px;">
+                                    <label class="mt" for="vcName">Status:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--HR CHECK LIST END-->
                     <!--IQ SCORE START-->
-                    <div class="col-sm-12" id="iq-score" *ngIf="selectedValue == 2">
+                    <div *ngIf="selected == 3">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">IQ Score:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field class="example-full-width">
+                                        <input type="text" matInput placeholder="IQ Score">
+                                    </mat-form-field>
+                                </div>
+                            </div>
 
-                        <div class="form-group col-lg-12">
-                            <div class="col-lg-3" style="margin-top:15px;">
-                                <label class="mt" for="vcName">IQ Score:</label>
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:7px;">
+                                    <label class="mt" for="vcName">Upload:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="file" class="form-control">
+                                </div>
                             </div>
-                            <div class="col-lg-9">
-                                <mat-form-field class="example-full-width">
-                                    <input type="text" matInput placeholder="IQ Score">
-                                </mat-form-field>
-                            </div>
-                        </div>
 
-                        <div class="form-group col-lg-12">
-                            <div class="col-lg-3" style="margin-top:15px;">
-                                <label class="mt" for="vcName">Upload:</label>
-                            </div>
-                            <div class="col-lg-9">
-                                <input type="file" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group col-lg-12">
-                            <div class="col-lg-3" style="margin-top:5px;">
-                                <label class="mt" for="vcName">Status:</label>
-                            </div>
-                            <div class="col-lg-9">
-                                <select class="form-control">
-                                    <option>Select</option>
-                                    <option>Approved</option>
-                                    <option>Rejected</option>
-                                </select>
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Status:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!--IQ SCORE END-->
+                    <!--FITNESS METRIC START-->
+                    <div *ngIf="selected == 4">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Height</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field class="example-full-width">
+                                        <input type="number" matInput placeholder="Height">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Weight</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field class="example-full-width">
+                                        <input type="number" matInput placeholder="Weight in KGs">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Blood Pressure</label>
+                                </div>
+                                <div class="col-lg-9" style="padding-left:0px;padding-right:0px;">
+                                    <mat-form-field class="col-lg-6">
+                                        <input type="number" matInput placeholder="Lower Value">
+                                    </mat-form-field>
+                                    <mat-form-field class="col-lg-6">
+                                        <input type="number" matInput placeholder="Higher Value">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Status:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--FITNESS METRIC END-->
                     <!--FIRST VALIDATION START-->
-                    <div id="first-validation" *ngIf="selectedValue == 3">
+                    <div *ngIf="selected == 5">
                         <div class="col-sm-6">
                             <div class="form-group col-lg-12">
                                 <div class="col-lg-4 hide">
@@ -1097,22 +1202,23 @@
 
                         <div class="col-sm-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Approved</option>
-                                        <option>Rejected</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--FIRST VALIDATION END-->
                     <!--SECOND VALIDATION START-->
-                    <div id="second-validation" *ngIf="selectedValue == 4">
+                    <div *ngIf="selected == 6">
                         <div class="col-sm-6">
                             <div class="form-group col-lg-12">
                                 <div class="col-lg-4 hide">
@@ -1285,181 +1391,322 @@
 
                         <div class="col-sm-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Approved</option>
-                                        <option>Rejected</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--SECOND VALIDATION END-->
                     <!-- HR manager ROUND START-->
-                    <div *ngIf="selectedValue == 5">
+                    <div *ngIf="selected == 7">
 
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Rejected</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- HR manager ROUND END-->
                     <!--Final interview START-->
-                    <div *ngIf="selectedValue == 6">
+                    <div *ngIf="selected == 8">
+
 
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Rejected</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                            <mat-option value="3"> Waiting List </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Final interview END-->
                     <!--Waiting list START-->
-                    <div *ngIf="selectedValue == 7">
+                    <div *ngIf="selected == 9">
 
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Rejected</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Waiting lisit END-->
-                    <!--Reference check START-->
-                    <div *ngIf="selectedValue == 8">
-                        <div class="col-sm-6">
-                            <h4 style="margin-left:28px;">Reference 1</h4>
+                    <!--OFFER APPROVAL START-->
+                    <div *ngIf="selected == 10">
+                        <div class="col-lg-12">
                             <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Name">
-                                    </mat-form-field>
+                                <div class="col-lg-3" style="margin-top:7px;">
+                                    <label class="mt" for="vcName">Upload:</label>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Company">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Email">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Phone">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <h4 style="margin-left:28px;">Reference 2</h4>
-                            <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Name">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Company">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Email">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group col-lg-12">
-                                    <mat-form-field class="example-full-width">
-                                        <input type="text" matInput placeholder="Phone">
-                                    </mat-form-field>
+                                <div class="col-lg-9">
+                                    <input type="file" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Approved</option>
-                                        <option>Rejected</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--OFFER Approval END-->
+                    <!--Reference check START-->
+                    <div *ngIf="selected == 11">
+                        <div class="col-sm-12">
+                            <div class="col-sm-12">
+                                <h4 style="margin-left: 13%;"> Reference </h4>
+                                <mat-horizontal-stepper [linear]="false" #stepper>
+                                    <mat-step [stepControl]="firstFormGroup">
+                                        <div class="col-sm-12">
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Name">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Company">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Email">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Phone">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </mat-step>
+                                    <mat-step [stepControl]="secondFormGroup">
+                                        <div class="col-sm-12">
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Name">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Company">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Email">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Phone">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </mat-step>
+                                    <mat-step [stepControl]="thirdFormGroup">
+                                        <div class="col-sm-12">
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Name">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Company">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Email">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group col-lg-12">
+
+                                                    <mat-form-field class="example-full-width">
+                                                        <input type="text" matInput placeholder="Phone">
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </mat-step>
+                                </mat-horizontal-stepper>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 hide">
+                            <div class="col-sm-6">
+                                <h4 style="margin-left:28px;">Reference 1</h4>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Name">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Company">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Email">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Phone">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 style="margin-left:28px;">Reference 2</h4>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Name">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Company">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Email">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group col-lg-12">
+                                        <mat-form-field class="example-full-width">
+                                            <input type="text" matInput placeholder="Phone">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Status:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2">Rejected</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Reference check END-->
                     <!--offer letter START-->
-                    <div *ngIf="selectedValue == 9">
+                    <div *ngIf="selected == 12">
 
                         <div class="col-lg-12">
-                            <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
-                                    <label class="mt" for="vcName">Status:</label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Pending</option>
-                                        <option>Exit</option>
-                                    </select>
-                                </div>
-                            </div>
+
                             <div class="col-lg-6">
                                 <div class="form-group col-lg-12">
                                     <div class="col-lg-12" style="padding:0px;">
@@ -1482,42 +1729,134 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group col-lg-12">
+                                <div class="col-lg-3 hide" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Status:</label>
+                                </div>
+                                <div class="col-lg-12">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Pending </mat-option>
+                                            <mat-option value="3"> Exit </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!--offer letter END-->
                     <!--Employee confirmation START-->
-                    <div *ngIf="selectedValue == 10">
+                    <div *ngIf="selected == 13">
 
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Exit</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Exit </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Employee confirmation END-->
-                    <!--office visit START-->
-                    <div *ngIf="selectedValue == 11">
-
+                    <!--FITNESS TEST START-->
+                    <div *ngIf="selected == 14">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3" style="margin-top:7px;">
+                                    <label class="mt" for="vcName">Health Reports:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="file" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Status:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Approved</mat-option>
+                                            <mat-option value="2"> Rejected </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--FITNESS TEST END-->
+                    <!--Document upload START-->
+                    <div *ngIf="selected == 15">
+                        <div class="col-sm-12 ">
+                            <div class="col-sm-12">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-12" style="padding:5px">
+                                        <a>
+                                            <i class="fa fa-plus pull-right" style="color:#428bca;"></i>
+                                        </a>
+                                    </div>
+                                    <table class=" table table-responsive table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th> Name</th>
+                                                <th> Description</th>
+                                                <th> Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" placeholder="name" class="form-control" /></td>
+                                                <td><input type="file" class="form-control" /></td>
+                                                <td style="text-align:center;padding-top: 15px;"><span> <i class="fa fa-trash-o red"></i></span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
                                 <div class="col-lg-3" style="margin-top:5px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Exit</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1"> Completed </mat-option>
+                                            <mat-option value="2"> Pending </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Document upload END-->
+                    <!--office visit START-->
+                    <div *ngIf="selected == 16">
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-lg-12">
+                                <div class="col-lg-3" style="margin-top:15px;">
+                                    <label class="mt" for="vcName">Status:</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Exit </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
@@ -1536,7 +1875,7 @@
                     </div>
                     <!--Office visit END-->
                     <!--Team Intro START-->
-                    <div *ngIf="selectedValue == 12">
+                    <div *ngIf="selected == 17">
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
                                 <div class="col-lg-3" style="margin-top:15px;">
@@ -1558,37 +1897,39 @@
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Pending</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Pending </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Team Intro END-->
                     <!--Induction START-->
-                    <div *ngIf="selectedValue == 13">
+                    <div *ngIf="selected == 18">
 
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Pending</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Pending </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--INductionEND-->
                     <!--certification START-->
-                    <div *ngIf="selectedValue == 14">
+                    <div *ngIf="selected == 19">
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
                                 <div class="col-lg-3" style="margin-top:15px;">
@@ -1602,7 +1943,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <div class="col-lg-3" style="margin-top:15px;">
-                                    <label class="mt" for="vcName">Date of Completion</label>
+                                    <label class="mt" for="vcName">Completion Date</label>
                                 </div>
                                 <div class="col-lg-9">
                                     <mat-form-field class="example-full-width">
@@ -1616,22 +1957,23 @@
 
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Completed</option>
-                                        <option>Pending</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Completed</mat-option>
+                                            <mat-option value="2"> Pending </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Certification END-->
                     <!--Probation START-->
-                    <div *ngIf="selectedValue == 15">
+                    <div *ngIf="selected == 20">
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
                                 <div class="col-lg-3" style="margin-top:15px;">
@@ -1647,22 +1989,21 @@
 
                         <div class="col-lg-12">
                             <div class="form-group col-lg-12">
-                                <div class="col-lg-3" style="margin-top:5px;">
+                                <div class="col-lg-3" style="margin-top:15px;">
                                     <label class="mt" for="vcName">Status:</label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <select class="form-control">
-                                        <option>Select</option>
-                                        <option>Accepted</option>
-                                        <option>Exit</option>
-                                    </select>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Select">
+                                            <mat-option value="1">Accepted</mat-option>
+                                            <mat-option value="2"> Exit </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--ProbationEND-->
-
-
                     <div class="col-sm-12">
                         <div class="form-group col-lg-12">
                             <div class="col-lg-4 hide">
@@ -1680,8 +2021,8 @@
             </div>
             <div class="modal-footer">
                 <div style="width: 150px;" class="col-sm-offset-4">
-                    <button type="button" class="btn btn-success" (click)="fnAddModal(0)">Save</button>
-                    <button type="button" class="btn btn-default" (click)="fnAddModal(0)">Close</button>
+                    <button type="button" class="btn btn-success" (click)="fnAddModal(0,1)">Save</button>
+                    <button type="button" class="btn btn-default" (click)="fnAddModal(0,1)">Close</button>
                 </div>
             </div>
         </div>
