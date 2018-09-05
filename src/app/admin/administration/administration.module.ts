@@ -4,7 +4,8 @@ import { AdministrationRoutingModule } from './/administration-routing.module';
 import { UsersComponent } from './users/users.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatDatepickerModule } from '@angular/material';
+import { ModalModule, TooltipModule } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import { MatInputModule } from '@angular/material';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+     MatDatepickerModule,
+     ModalModule, 
+     TooltipModule
   ],
   declarations: [UsersComponent, SkillsComponent]
 })
