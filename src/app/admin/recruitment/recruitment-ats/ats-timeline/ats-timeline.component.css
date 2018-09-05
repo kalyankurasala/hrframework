@@ -202,3 +202,11 @@
   .fa-red{
     color: red;
   }
+
+ ::ng-deep .mat-horizontal-stepper-header-container{
+    margin-left: 9% ;
+  }
+
+  ::ng-deep .mat-horizontal-content-container{
+    padding: 0px;
+  }

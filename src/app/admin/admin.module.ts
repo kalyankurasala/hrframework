@@ -14,8 +14,8 @@ import { TabsModule, ModalModule } from 'ngx-bootstrap';
 import { AtsTimelineComponent } from './recruitment/recruitment-ats/ats-timeline/ats-timeline.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {RatingModule} from "ngx-rating";
-import { MatInputModule, MatDialogModule,MatDatepickerModule, MatButtonModule,MatSelectModule, MatProgressBarModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
+import { RatingModule } from "ngx-rating";
+import { MatInputModule, MatDialogModule, MatDatepickerModule, MatButtonModule, MatSelectModule, MatProgressBarModule, MatProgressSpinnerModule, MatSliderModule, MatSlideToggleModule, MatStepperModule } from '@angular/material';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AdministrationLayoutComponent } from './administration/administration-layout/administration-layout.component';
 
@@ -35,8 +35,11 @@ import { AdministrationLayoutComponent } from './administration/administration-l
     MatSelectModule,
     MatSliderModule,
     MatDatepickerModule,
-    MatProgressBarModule, 
+
+    MatStepperModule,
+    MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatSliderModule, MatSlideToggleModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
       radius: 100,
@@ -47,8 +50,8 @@ import { AdministrationLayoutComponent } from './administration/administration-l
       animationDuration: 300
     })
   ],
-  declarations: [ AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent,AdministrationLayoutComponent,
-     AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent,AtsTimelineComponent],
+  declarations: [AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent, AdministrationLayoutComponent,
+    AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent, AtsTimelineComponent],
 
 })
 export class AdminModule { }
