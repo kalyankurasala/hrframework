@@ -19,6 +19,7 @@ export interface UserData {
 export class UsersComponent implements OnInit {
   @ViewChild('addUserModal') public addUserModal: ModalDirective;
   @ViewChild('deleteUserModal') public deleteUserModal: ModalDirective;
+  @ViewChild('permissionUserModal') public permissionUserModal: ModalDirective
 
   userAddEditForm: FormGroup;
   id: number;
@@ -69,5 +70,12 @@ export class UsersComponent implements OnInit {
     else {
       this.deleteUserModal.hide();
     }
+  }
+
+  fnPermissionUserModal(flag) {
+    if (flag == 1)
+      this.permissionUserModal.show();
+    else
+      this.permissionUserModal.hide();
   }
 }

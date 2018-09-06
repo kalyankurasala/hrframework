@@ -6,9 +6,178 @@
     <p class="sub-header-new">This page is used to manage Users.</p>
 </div>
 <!--End f bread crumb -->
+
+<div style="margin-bottom:10px;padding: 0;" class="col-sm-12">
+    <a class="btn-circle btn btn-lg bg-dark-teal text-white pull-right" tooltip="Filter" placement="bottom" (click)="shouldShow = !shouldShow"><i
+            class="fa fa-filter"></i></a>
+
+    <a class="btn-circle btn btn-lg bg-blue text-white pull-right" (click)="fnAddUserModal(1)" placement="bottom" tooltip="Add Applicant"><i
+            class="fa fa-plus"></i></a>
+</div>
+
+
 <!--Add and Filter BUTTON START-->
 
 <!--Add and Filter BUTTON END-->
+
+
+
+<!-- Advance filter start-->
+
+<div class="box blue-hoki mar-btm-10" [ngClass]="{show: shouldShow, hide: !shouldShow}" style="border: 1px solid #3c8dbc; float: left;margin-bottom: 5px; ">
+    <div class="" style="background-color: #3c8dbc; color: #fff; float: left; width: 100%;padding: 10px;">
+        <div class="caption ">
+            <i class="fa fa-search"></i> Advanced Filters
+        </div>
+        <!-- <div class="tools"><a href="javascript:;" class="collapse"></a></div> -->
+
+    </div>
+    <div class="form pull-left">
+
+        <div class="form-body">
+            <div class="row  col-sm-12">
+                <form id="save_list">
+                    <!-- START ACCOUNT -->
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label">Keyword</label>
+                            <div class="form-group">
+                                <input type="text" placeholder="Keyword..." id="contact_city" name="contact_city" value="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label">City</label>
+                            <div class="form-group">
+                                <input type="text" placeholder="City..." id="contact_city" name="contact_city" value="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label">State</label>
+                            <div class="form-group">
+                                <input type="text" placeholder="State..." id="contact_city" name="contact_city" value="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-group">
+                                    <label class="control-label">Country</label>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Country..." id="contact_city" name="contact_city" value="" class="form-control">
+                                    </div>
+                                </div>
+                            </div> -->
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="margin-bottom: 1px;">
+                        <div class="form-group">
+                            <label class="control-label">Experience:</label>
+                            <select class="form-control" name="contact_type" id="contact_type">
+                                <option value="" selected="selected">Select</option>
+                                <option value="C">1</option>
+                                <option value="C">2</option>
+                                <option value="C">3</option>
+                                <option value="C">4</option>
+                                <option value="C">5</option>
+                                <option value="C">6</option>
+                                <option value="C">7</option>
+                                <option value="C">8</option>
+                                <option value="C">9</option>
+                                <option value="C">10</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="margin-bottom: 1px;">
+                        <div class="form-group">
+                            <label class="control-label">Experience in Months:</label>
+                            <select class="form-control" name="contact_type" id="contact_type">
+                                <option value="" selected="selected">Select</option>
+                                <option value="C">1</option>
+                                <option value="C">2</option>
+                                <option value="C">3</option>
+                                <option value="C">4</option>
+                                <option value="C">5</option>
+                                <option value="C">6</option>
+                                <option value="C">7</option>
+                                <option value="C">8</option>
+                                <option value="C">9</option>
+                                <option value="C">10</option>
+                                <option value="C">11</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="margin-bottom: 1px;">
+                        <div class="form-group">
+                            <label class="control-label">Job Type:</label>
+                            <select class="form-control" name="contact_type" id="contact_type">
+                                <option value="" selected="selected">Select</option>
+                                <option value="C">Permanent</option>
+                                <option value="C">Contract</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="margin-bottom: 1px;">
+                        <div class="form-group">
+                            <label class="control-label">Industry Type</label>
+                            <select class="form-control" name="contact_driver_type" id="contact_driver_type">
+                                <option value="" selected="selected">All Types</option>
+                                <option value="Owner Operator">IT</option>
+                                <option value="Company Driver">Logistics</option>
+                                <option value="Lease Purchase">Services</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <!--  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <label for="fromDate">Filter From</label>
+                                        <input type="date" class="form-control" id="contact_from_date" value="" name="from_date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <label for="fromDate">Filter To</label>
+                                        <input type="date" class="form-control" id="contact_to_date" value="" name="to_date">
+                                    </div>
+                                </div>
+                            </div> -->
+                </form>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="margin-top: 3px">
+                    <div class="form-group" style="margin-top: 12%;">
+                        <label for="fromDate"></label>
+                        <div class="input-group" style="float: left; margin-right: 15px;;">
+                            <button type="button" style="width: 95%;" class="btn btn-primary btn-sm">
+                                <i class="fa fa-search" style="margin-right: 5px;"></i>Search
+                            </button>
+                        </div>
+                        <div class="input-group" style="float: left;">
+                            <label for="fromDate"></label>
+                            <button class="btn btn-primary btn-sm" style="width: 95%;">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END row -->
+    </div>
+    <!-- END form-body -->
+</div>
+<!-- Advance filter end-->
 <!--DATATABLE START-->
 <div class="">
     <div class="col-xs-12 panel-0">
@@ -22,7 +191,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Permissions</th>
+                                <th style="text-align: center;">Permissions</th>
                                 <th style="text-align: center;">Actions</th>
                             </tr>
                         </thead>
@@ -31,7 +200,75 @@
                                 <td>Kalyan Kurasala</td>
                                 <td>Kalyan@gmail.com</td>
                                 <td>9441768216</td>
-                                <td><a>2/10</a></td>
+                                <td style="text-align: center"><a (click)="fnPermissionUserModal(1)">2/10</a></td>
+                                <td style="text-align: center;">
+                                    <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
+                                    <i class="fa fa-envelope"></i>
+                                </a> -->
+                                    <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;" (click)="fnAddUserModal(1)">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a (click)="fnUserDeleteModal(1)">
+                                        <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-trash red"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sam Billings</td>
+                                <td>Sam123@gmail.com</td>
+                                <td>9440008216</td>
+                                <td style="text-align:center;"><a (click)="fnPermissionUserModal(1)">7/10</a></td>
+                                <td style="text-align: center">
+                                    <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
+                                    <i class="fa fa-envelope"></i>
+                                </a> -->
+                                    <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;" (click)="fnAddUserModal(1)">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a (click)="fnUserDeleteModal(1)">
+                                        <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-trash red"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jeo Root</td>
+                                <td>Root123@gmail.com</td>
+                                <td>9999999216</td>
+                                <td style="text-align:center;"><a (click)="fnPermissionUserModal(1)">6/10</a></td>
+                                <td style="text-align: center">
+                                    <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
+                                    <i class="fa fa-envelope"></i>
+                                </a> -->
+                                    <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;" (click)="fnAddUserModal(1)">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a (click)="fnUserDeleteModal(1)">
+                                        <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-trash red"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kane Williamson</td>
+                                <td>Kane.Willy1243@gmail.com</td>
+                                <td>9876543214</td>
+                                <td style="text-align:center;"><a (click)="fnPermissionUserModal(1)">4/10</a></td>
+                                <td style="text-align: center">
+                                    <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
+                                    <i class="fa fa-envelope"></i>
+                                </a> -->
+                                    <a title="Edit Consultant" style="margin-right: 10px; cursor: pointer;" (click)="fnAddUserModal(1)">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a (click)="fnUserDeleteModal(1)">
+                                        <i style="cursor: pointer;" title="Delete Consultant" class="fa fa-trash red"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Steve Smith</td>
+                                <td>SS_123@gmail.com</td>
+                                <td>7474747747</td>
+                                <td style="text-align:center;"><a (click)="fnPermissionUserModal(1)">9/10</a></td>
                                 <td style="text-align: center">
                                     <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
                                     <i class="fa fa-envelope"></i>
@@ -57,7 +294,7 @@
 
 <!--USER MODAL START two colum layout -->
 <div class="modal fade" bsModal #addUserModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
-    <div class="modal-dialog modal-md">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="modal-title">
@@ -68,61 +305,43 @@
                 </span>
             </div>
             <div class="modal-body">
-                <div class="modal-body  container-fluid">
-                    <form [formGroup]="userAddEditForm" class="col-lg-12">
-                        <div class="form-group col-lg-6">
-                            <div class="col-lg-12">
+                <div class="modal-body container-fluid">
+                    <form [formGroup]="userAddEditForm">
+                        <div class="form-group col-lg-12">
+                            <div class="col-sm-3">
+                                <div class="col-sm-12" style="margin-top: 15px;">
+                                    <label> Name&nbsp;&nbsp;: </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
                                 <mat-form-field class="example-full-width">
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcName">
-                                    <mat-placeholder class="placeholder">User Name</mat-placeholder>
+                                    <mat-placeholder class="placeholder">Name</mat-placeholder>
                                 </mat-form-field>
                                 <!-- <input type="text" class="form-control" formControlName="vcName" placeholder="Applicant Name" /> -->
                             </div>
                         </div>
-                        <div class="form-group col-lg-6">
-                            <div class="col-lg-12">
-                                <!-- <mat-form-field class="example-full-width">
-                                    <input matInput formControlName="username" type="Date" autocomplete="off" formControlName="dtUpdated">
-                                    <mat-placeholder class="placeholder">Date Of birth</mat-placeholder>
-                                </mat-form-field> -->
-                                <!-- <input type="text" class="form-control" formControlName="dtUpdated" placeholder="Updated" /> -->
-                                <mat-form-field>
-                                    <input matInput [matDatepicker]="picker" placeholder="Date Of Birth">
-                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                    <mat-datepicker #picker></mat-datepicker>
-                                </mat-form-field>
-
+                        <div class="form-group col-lg-12">
+                            <div class="col-sm-3">
+                                <div class="col-sm-12" style="margin-top: 15px;">
+                                    <label> Email&nbsp;&nbsp;: </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <div class="col-lg-12">
+                            <div class="col-lg-9">
                                 <mat-form-field class="example-full-width">
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="dtUpdated">
-                                    <mat-placeholder class="placeholder">Current Employer</mat-placeholder>
+                                    <mat-placeholder class="placeholder">Email</mat-placeholder>
                                 </mat-form-field>
                                 <!-- <input type="text" class="form-control" formControlName="dtUpdated" placeholder="Updated" /> -->
                             </div>
                         </div>
-                        <div class="form-group col-lg-6">
-                            <div class="col-lg-12">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="dtUpdated">
-                                    <mat-placeholder class="placeholder">Position</mat-placeholder>
-                                </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="dtUpdated" placeholder="Updated" /> -->
+                        <div class="form-group col-lg-12">
+                            <div class="col-sm-3">
+                                <div class="col-sm-12" style="margin-top: 15px;">
+                                    <label> Phone&nbsp;&nbsp;: </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <div class="col-lg-12">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcExperience">
-                                    <mat-placeholder class="placeholder">Experience (Years)</mat-placeholder>
-                                </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="vcExperience" placeholder="Experience (Years)" /> -->
-                            </div>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <div class="col-lg-12">
+                            <div class="col-lg-9">
                                 <mat-form-field class="example-full-width">
                                     <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcPhone">
                                     <mat-placeholder class="placeholder">Phone</mat-placeholder>
@@ -130,24 +349,6 @@
                                 <!-- <input type="text" class="form-control" formControlName="vcPhone" placeholder="Phone" /> -->
                             </div>
                         </div>
-
-                        <div class="form-group col-lg-6">
-                            <div class="col-lg-12">
-                                <mat-form-field class="example-full-width">
-                                    <input matInput formControlName="username" type="text" autocomplete="off" formControlName="vcCategory">
-                                    <mat-placeholder class="placeholder">Skills</mat-placeholder>
-                                </mat-form-field>
-                                <!-- <input type="text" class="form-control" formControlName="vcCategory" placeholder="Category" /> -->
-                            </div>
-                        </div>
-
-
-                        <div class="form-group col-lg-6" style="margin-top: 5px;">
-                            <div class="col-lg-12">
-                                <input type="file" class="form-control" style="font-size: 12px;" formControlName="vcResumePath" placeholder="Resume" />
-                            </div>
-                        </div>
-
                     </form>
                 </div>
             </div>
@@ -182,3 +383,92 @@
     </div>
 </div>
 <!--DELETE MODAL END-->
+
+
+
+
+<!--PERMISSION MODAL START-->
+<div class="modal fade" bsModal #permissionUserModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">
+                    <b style="font-size:17px">Manage Permissions</b>
+                </span>
+                <span><a class="pull-right color-black" (click)="fnPermissionUserModal(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </span>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="col-sm-12">
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Initial HR Round</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">HR Check List</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">IQ Test</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Fitness Metric</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">First Validation</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Second Validation</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">HR Manager Round</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Final Interview</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Waiting List</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Offer Approval</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Reference Check</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Offer Letter</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Employer Confirmation</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Fitness Test</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Document Upload</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Office Visit</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Team Intro</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Induction</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Certification</mat-checkbox>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:5px;">
+                            <mat-checkbox color="primary">Probation</mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <button type="submit" class="btn btn-success" (click)="fnPermissionUserModal(0)">Save</button>
+                <button type="button" class="btn btn-default" (click)="fnPermissionUserModal(0)">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Permissions MODAL END-->
