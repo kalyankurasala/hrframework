@@ -14,7 +14,7 @@ export class ManageApplicantsComponent implements OnInit {
   @ViewChild('deleteApplicantModal') public deleteApplicantModal: ModalDirective;
   @ViewChild('viewModal') public viewModal: ModalDirective;
 
-
+  toggoleShowHide:string ="visible"; 
   applicantAddEditForm: FormGroup;
   id: number;
   public shouldShow = false;

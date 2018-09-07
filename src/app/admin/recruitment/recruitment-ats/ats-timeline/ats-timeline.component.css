@@ -210,3 +210,13 @@
   ::ng-deep .mat-horizontal-content-container{
     padding: 0px;
   }
+
+  .ats-status{
+    margin-right: 20px;
+    background-color: #48db48;
+    font-size: 11px;
+    border-radius: 5%;
+    padding: 4px;
+  }
+
+  
