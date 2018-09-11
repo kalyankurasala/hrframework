@@ -1,8 +1,8 @@
 <div class="col-sm-12" style="margin-top:10px;margin-bottom: 20px;">
-  <nav class="col-sm-offset-1 col-sm-11">
+  <nav>
     <ul class="nav navbar-nav">
-      <li><a [routerLink]="['/admin/associate/fitness']">Fitness</a></li>
-      <li><a [routerLink]="['/admin/associate/alignment']">Alignment</a></li>
+      <li [routerLinkActive]="['active']"><a [routerLink]="['/admin/associate/fitness']">Fitness</a></li>
+      <li [routerLinkActive]="['active']"><a [routerLink]="['/admin/associate/alignment']">Alignment</a></li>
     </ul>
   </nav>
 </div>
