@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Chart } from 'angular-highcharts';
+import { ModalDirective } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-fitness',
@@ -7,11 +8,28 @@ import { Chart } from 'angular-highcharts';
   styleUrls: ['./fitness.component.css']
 })
 export class FitnessComponent implements OnInit {
+  
+  @ViewChild('AddFitnessStatModal') public AddFitnessStatModal: ModalDirective;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  fnAddFitnessStatModal(flag) {
+    if (flag == 1) {
+      this.AddFitnessStatModal.show();
+    }
+    else {
+      this.AddFitnessStatModal.hide();
+    }
+  }
+
+
+
+
+
+
 
   BPchart = new Chart({
     chart: {

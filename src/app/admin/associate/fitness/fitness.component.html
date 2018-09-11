@@ -1,25 +1,57 @@
 <app-associate-tab-band></app-associate-tab-band>
-  <!-- Bread crumb-->
-  <div class="col-sm-12">
-    <div class="col-lg-12 margin-bottom-20 header-new-main">
-        <span class="header-icon-band">
-            <i class="fa fa-file-text-o icon-band"></i>
-        </span>
-        <p class="sub-header-new">This page indicates the Fitness Statistics of an Associate.</p>
-    </div>
+<!-- Bread crumb-->
+<div class="col-sm-12">
+  <div class="col-lg-12 margin-bottom-10 header-new-main">
+    <span class="header-icon-band">
+      <i class="fa fa-file-text-o icon-band"></i>
+    </span>
+    <p class="sub-header-new">This page indicates the Fitness Statistics of an Associate.</p>
+  </div>
 </div>
 <!--End f bread crumb -->
+
+<div class="col-sm-12">
+  <a (click)="fnAddFitnessStatModal(1)" placement="bottom" tooltip="Add Health Statistics" class="btn btn-primary pull-right">
+    <i class="fa fa-plus"></i>&nbsp;Add Health Statistics </a>
+
+</div>
+
+
 <div class="col-sm-12">
   <div [chart]="BPchart" class="col-sm-12" style="margin-top:10px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
 </div>
 <div class="col-sm-12">
-    <div [chart]="pulsechart" class="col-sm-12" style="margin-top:10px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
-  </div>
+  <div [chart]="pulsechart" class="col-sm-12" style="margin-top:10px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
+</div>
 
 <div class="col-sm-12">
   <div [chart]="BMIchart" class="col-sm-12" style="margin-top:10px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
 </div>
 
 <div class="col-sm-12">
-    <div [chart]="FPchart" class="col-sm-12" style="margin-top:10px;margin-bottom:20px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
+  <div [chart]="FPchart" class="col-sm-12" style="margin-top:10px;margin-bottom:20px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
+</div>
+
+
+<!--DELETE MODAL START-->
+<div class="modal fade" bsModal #AddFitnessStatModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <b style="font-size:17px">Add Fitness Statistics</b>
+        </span>
+        <span><a class="pull-right color-black" (click)="fnAddFitnessStatModal(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+        </span>
+      </div>
+      <div class="modal-body  container-fluid">
+        <p> &nbsp;&nbsp;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success" (click)="fnAddFitnessStatModal(0)"> Save </button>
+        <button type="button" class="btn btn-default" (click)="fnAddFitnessStatModal(0)"> Cancel </button>
+      </div>
+    </div>
   </div>
+</div>
+<!--DELETE MODAL END-->
