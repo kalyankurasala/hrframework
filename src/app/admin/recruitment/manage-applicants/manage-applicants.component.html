@@ -5,7 +5,7 @@
     </span>
     <p class="sub-header-new">This page is used to manage Applicants.</p>
 </div>
-<!--End f bread crumb -->
+<!--End of bread crumb -->
 <div style="margin-bottom:10px;padding: 0;" class="col-sm-12">
     <a class="btn-circle btn btn-lg bg-dark-teal text-white pull-right" tooltip="Filter" placement="bottom" (click)="shouldShow = !shouldShow"><i
             class="fa fa-filter"></i></a>
@@ -190,47 +190,52 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                             <tr class="tr-grid-header">
-                                <th>Name</th>
+                                <th>Application No.</th>
+                                <th>Applicant Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Position</th>
                                 <th>Skills</th>
-                                <th>HR Recruiter</th>
-                                <th style="text-align: center">Experience</th>
-                                <th>Referral</th>
-                                <th style="text-align: center">Profile</th>
-                                <th>Process</th>
+                                <th>Recruiter</th>
+                                <th style="text-align: center">Exp</th>
                                 <th>IQ</th>
-                                <th style="text-align: center">ATS</th>
+                                <th>Process</th>
+                                <!-- <th style="text-align: center">Profile</th> -->
+
+                                <!-- <th style="text-align: center">ATS</th> -->
+                                <th style="text-align: center;">Actions</th>
+
 
 
                                 <!-- <th>Category</th>
                                 <th>Job Type</th>
                                 <th style="text-align: center">Updated</th>
                                 <th style="text-align: center">Resume</th> -->
-                                <th style="text-align: center;">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let applicant of tableList">
+                                <td>{{applicant.intApplicantId}}</td>
                                 <td>{{applicant.vcName}}</td>
                                 <td>{{applicant.vcEmail}}</td>
                                 <td>{{applicant.vcPhone}}</td>
-                                <td>{{applicant.vcPosition}}</td>
                                 <td>{{applicant.vcSkills}}</td>
                                 <td>{{applicant.vcHRRecruiter}}</td>
                                 <td>{{applicant.vcExperience}}</td>
-                                <td>{{applicant.vcReferral}}</td>
-                                <td style="text-align: center">
-                                    <a data-toggle="modal" (click)="fnviewModalModal(1)" style="cursor: pointer;">View</a>
-                                </td>
-                                <td>{{applicant.vcProcess}}</td>
+                                
                                 <td>{{applicant.intIQ}}</td>
                                 <td style="text-align: center">
+                                        <a [routerLink]="['/admin/ats']" target="_blank">
+                                            {{applicant.vcProcess}}
+                                        </a>
+                                    </td>
+                                <!-- <td style="text-align: center">
+                                    <a data-toggle="modal" (click)="fnviewModalModal(1)" style="cursor: pointer;">View</a>
+                                </td> -->
+                                <!-- <td style="text-align: center">
                                     <a [routerLink]="['/admin/ats']" target="_blank">
                                         <i class="fa fa-external-link-square"></i>
                                     </a>
-                                </td>
+                                </td> -->
 
 
 
