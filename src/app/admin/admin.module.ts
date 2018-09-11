@@ -18,6 +18,7 @@ import { RatingModule } from "ngx-rating";
 import { MatInputModule, MatDialogModule, MatDatepickerModule, MatButtonModule, MatSelectModule, MatProgressBarModule, MatProgressSpinnerModule, MatSliderModule, MatSlideToggleModule, MatStepperModule } from '@angular/material';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AdministrationLayoutComponent } from './administration/administration-layout/administration-layout.component';
+import { AssociateLayoutComponent } from './associate/associate-layout/associate-layout.component';
 
 @NgModule({
   imports: [
@@ -51,7 +52,7 @@ import { AdministrationLayoutComponent } from './administration/administration-l
     })
   ],
   declarations: [AdminDashboardComponent, RecruitmentLayoutComponent, RecruitmentAtsComponent, AdministrationLayoutComponent,
-    AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent, AtsTimelineComponent],
+    AlignmentLayoutComponent, AluminiLayoutComponent, CultureComponent, UserProfileComponent, AtsTimelineComponent,AssociateLayoutComponent],
 
 })
 export class AdminModule { }

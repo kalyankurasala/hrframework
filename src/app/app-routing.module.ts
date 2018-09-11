@@ -8,7 +8,7 @@ import{RegisterComponent} from 'src/app/login/register/register.component';
 import{AdminLayoutComponent}from 'src/app/admin/admin-layout/admin-layout.component'; 
 
 const routes: Routes = [
-  { path: '',redirectTo: 'login',pathMatch: 'full' },
+ // { path: '',redirectTo: 'login',pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'forgot-pw', component: ForgotPasswordComponent },

@@ -10,23 +10,25 @@ import { AluminiLayoutComponent } from './alumini/alumini-layout/alumini-layout.
 import { CultureComponent } from './culture/culture/culture.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AdministrationLayoutComponent } from './administration/administration-layout/administration-layout.component';
+import { AssociateLayoutComponent } from './associate/associate-layout/associate-layout.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: AdminDashboardComponent },
   { path: 'ats', component: RecruitmentAtsComponent },
-  { path: 'recruitment', component: RecruitmentLayoutComponent,loadChildren:'./recruitment/recruitment.module#RecruitmentModule'},
-  { path: 'administration', component: AdministrationLayoutComponent,loadChildren:'./administration/administration.module#AdministrationModule'},
-  { path: 'alignment', component: AlignmentLayoutComponent},
-  { path: 'alumini', component: AluminiLayoutComponent},
-  { path: 'culture', component: CultureComponent},
-  { path: 'user-profile', component: UserProfileComponent}
+  { path: 'recruitment', component: RecruitmentLayoutComponent, loadChildren: './recruitment/recruitment.module#RecruitmentModule' },
+  { path: 'administration', component: AdministrationLayoutComponent, loadChildren: './administration/administration.module#AdministrationModule' },
+  { path: 'alignment', component: AlignmentLayoutComponent },
+  { path: 'alumini', component: AluminiLayoutComponent },
+  { path: 'culture', component: CultureComponent },
+  { path: 'user-profile', component: UserProfileComponent },
+  { path: 'associate', component: AssociateLayoutComponent, loadChildren: './associate/associate.module#AssociateModule' }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
-  ],exports:[RouterModule],
+  ], exports: [RouterModule],
   declarations: []
 })
 export class AdminRoutingModule { }
