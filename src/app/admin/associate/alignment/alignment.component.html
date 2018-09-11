@@ -1,7 +1,7 @@
 <app-associate-tab-band></app-associate-tab-band>
 
-  <!-- Bread crumb-->
-  <div class="col-sm-12">
+<!-- Bread crumb-->
+<div class="col-sm-12">
     <div class="col-lg-12 margin-bottom-10 header-new-main">
         <span class="header-icon-band">
             <i class="fa fa-file-text-o icon-band"></i>
@@ -10,9 +10,71 @@
     </div>
 </div>
 <!--End f bread crumb -->
-
-
 <div class="col-sm-12">
-  <div [chart]="quartileChart" class="col-sm-12" style="margin-top:10px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
+    <div class="pull-right">
+        <a (click)=" fnAddQuartStatModal(1)" placement="bottom" tooltip="Add Health Statistics" class="btn btn-primary">
+            <i class="fa fa-plus"></i>&nbsp;&nbsp;Add Quartile Statistics </a>
+    </div>
 </div>
 
+<div class="col-sm-12">
+    <div [chart]="quartileChart" class="col-sm-12" style="margin-top:10px;box-shadow: 0px 2px 2px 3px #c9c6c6;"></div>
+</div>
+
+
+<!--Quart MODAL START-->
+<div class="modal fade" bsModal #AddQuartStatModal="bs-modal" [config]="{backdrop: 'static'}" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">
+                    <b style="font-size:17px">Add Quartile Statistics</b>
+                </span>
+                <span><a class="pull-right color-black" (click)=" fnAddQuartStatModal(0)"><i class="fa fa-times"
+                            aria-hidden="true"></i></a>
+                </span>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Select Month :</label>
+                    <div class="col-sm-7">
+                        <mat-form-field>
+                            <mat-select placeholder="Select Month">
+                                <mat-option value="January">January</mat-option>
+                                <mat-option value="Febuary">Febuary</mat-option>
+                                <mat-option value="March">March</mat-option>
+                                <mat-option value="April">April</mat-option>
+                                <mat-option value="May">May</mat-option>
+                                <mat-option value="June">June</mat-option>
+                                <mat-option value="July">July</mat-option>
+                                <mat-option value="August">August</mat-option>
+                                <mat-option value="September">September</mat-option>
+                                <mat-option value="October">October</mat-option>
+                                <mat-option value="November">November</mat-option>
+                                <mat-option value="December">December</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Select Quartile :</label>
+                    <div class="col-sm-7">
+                        <mat-form-field>
+                            <mat-select placeholder="Select Quartile">
+                                <mat-option value="Q0">Q0</mat-option>
+                                <mat-option value="Q1">Q1</mat-option>
+                                <mat-option value="Q2">Q2</mat-option>
+                                <mat-option value="Q3">Q3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success" (click)=" fnAddQuartStatModal(0)"> Save </button>
+                <button type="button" class="btn btn-default" (click)=" fnAddQuartStatModal(0)"> Cancel </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Quart MODAL END-->

@@ -7,11 +7,8 @@ import { AssociateDataComponent } from './associate-data/associate-data.componen
 import { AssociateTabBandComponent } from './associate-tab-band/associate-tab-band.component';
 import { ChartModule } from 'angular-highcharts';
 import { TooltipModule, ModalModule } from 'ngx-bootstrap';
-<<<<<<< HEAD
 import { AddAssociateComponent } from './add-associate/add-associate.component';
-=======
 import {  MatSelectModule } from '@angular/material';
->>>>>>> c83dfbdede2b60e4e28e96b0edd3c7d12d9d4bad
 
 @NgModule({
   imports: [

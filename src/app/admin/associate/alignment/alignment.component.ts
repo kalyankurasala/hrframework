@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Chart } from 'angular-highcharts';
+import { ModalDirective } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-alignment',
@@ -8,9 +9,19 @@ import { Chart } from 'angular-highcharts';
 })
 export class AlignmentComponent implements OnInit {
 
+    @ViewChild('AddQuartStatModal') public AddQuartStatModal: ModalDirective;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  fnAddQuartStatModal(flag) {
+    if (flag == 1) {
+      this.AddQuartStatModal.show();
+    }
+    else {
+      this.AddQuartStatModal.hide();
+    }
   }
 
   quartileChart = new Chart({
