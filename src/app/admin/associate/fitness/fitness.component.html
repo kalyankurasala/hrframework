@@ -11,9 +11,23 @@
 <!--End f bread crumb -->
 
 <div class="col-sm-12">
-  <a (click)="fnAddFitnessStatModal(1)" placement="bottom" tooltip="Add Health Statistics" class="btn btn-primary pull-right">
-    <i class="fa fa-plus"></i>&nbsp;Add Health Statistics </a>
+ 
+  <div class="pull-right">
+  <a (click)="fnAddFitnessStatModal(1)" placement="bottom" tooltip="Add Health Statistics" class="btn btn-primary">
+    <i class="fa fa-plus"></i>&nbsp;&nbsp;Add Health Statistics </a>
+  </div>
 
+  <div class="pull-right" style="margin-right:10px;">
+      <mat-form-field>
+          <mat-select placeholder="Select Year">
+              <mat-option value="2018">2018</mat-option>
+              <mat-option value="2017">2017</mat-option>
+              <mat-option value="2016">2016</mat-option>
+              <mat-option value="2015">2015</mat-option>
+              <mat-option value="2014">2014</mat-option>
+            </mat-select>
+      </mat-form-field>
+    </div>
 </div>
 
 
@@ -44,8 +58,73 @@
         <span><a class="pull-right color-black" (click)="fnAddFitnessStatModal(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
         </span>
       </div>
-      <div class="modal-body  container-fluid">
-        <p> &nbsp;&nbsp;</p>
+      <div class="modal-body container-fluid">
+          <form class="form-horizontal">
+
+              <div class="form-group">
+                  <div class="col-xs-12">
+                      <h4>Blood Plesure</h4>
+                      <hr>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-4 control-label">Select Month :</label>
+                  <div class="col-sm-7">
+                      <mat-form-field>
+                          <mat-select placeholder="Select Month">
+                              <mat-option value="January">January</mat-option>
+                              <mat-option value="Febuary">Febuary</mat-option>
+                              <mat-option value="March">March</mat-option>
+                              <mat-option value="April">April</mat-option>
+                              <mat-option value="May">May</mat-option>
+                              <mat-option value="June">June</mat-option>
+                              <mat-option value="July">July</mat-option>
+                              <mat-option value="August">August</mat-option>
+                              <mat-option value="September">September</mat-option>
+                              <mat-option value="October">October</mat-option>
+                              <mat-option value="November">November</mat-option>
+                              <mat-option value="December">December</mat-option>
+                            </mat-select>
+                      </mat-form-field>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-4 control-label">Systolic :</label>
+                  <div class="col-sm-7">
+                      <input type="text" class="form-control" placeholder="Systolic BP">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-4 control-label">Diastolic :</label>
+                  <div class="col-sm-7">
+                      <input type="text" class="form-control" placeholder="Diastolic BP">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-xs-12">
+                      <h4>Heart Rate (Pulse) </h4>
+                      <hr>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-4 control-label">Pulse :</label>
+                  <div class="col-sm-7">
+                      <input type="text" class="form-control" placeholder="Heart Rate (Pulse)">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-xs-12">
+                      <h4>BMI</h4>
+                      <hr>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-4 control-label">Body Mass Index :</label>
+                  <div class="col-sm-7">
+                      <input type="text" class="form-control" placeholder="Body Mass Index">
+                  </div>
+              </div>
+          </form>
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-success" (click)="fnAddFitnessStatModal(0)"> Save </button>
