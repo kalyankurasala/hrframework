@@ -7,6 +7,7 @@ import { AssociateDataComponent } from './associate-data/associate-data.componen
 import { AssociateTabBandComponent } from './associate-tab-band/associate-tab-band.component';
 import { ChartModule } from 'angular-highcharts';
 import { TooltipModule, ModalModule } from 'ngx-bootstrap';
+import { AddAssociateComponent } from './add-associate/add-associate.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { TooltipModule, ModalModule } from 'ngx-bootstrap';
     TooltipModule,
     ModalModule
   ],
-  declarations: [FitnessComponent, AlignmentComponent, AssociateDataComponent, AssociateTabBandComponent]
+  declarations: [FitnessComponent, AlignmentComponent, AssociateDataComponent, AssociateTabBandComponent, AddAssociateComponent]
 })
 export class AssociateModule { }
