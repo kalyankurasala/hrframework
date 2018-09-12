@@ -1,29 +1,23 @@
-
-
 <!-- BEGIN PAGE CONTENT INNER -->
 <div class="portlet light">
     <div class="portlet-body">
         <div class="row">
+            <div class="col-sm-12" style="margin-top:10px;">
+                <nav>
+                    <ul class="nav navbar-nav">
+                        <li [routerLinkActive]="['active']"><a [routerLink]="['manage-applicants']">Manage Applicants</a></li>
+                        <li [routerLinkActive]="['active']"><a [routerLink]="['manage-jobs']">Manage Jobs</a></li>
+                    </ul>
+                </nav>
 
-            <div class="col-md-3">
-                <ul class="ver-inline-menu tabbable margin-bottom-10">
-                    <li  [routerLinkActive]="['active']">
-                        <a [routerLink]="['manage-applicants']" >
-                            <i class="fa fa-plus"></i>Applicants</a>
-                        <span class="after">
-                        </span>
-                    </li>
-                    <li [routerLinkActive]="['active']">
-                        <a [routerLink]="['manage-jobs']">
-                            <i class="fa fa-plus"></i>Jobs </a>
-                    </li>
-                </ul>
+                
             </div>
 
-            <div class="col-md-9">
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="margin-top:10px;">
                 <router-outlet></router-outlet>
             </div>
-
         </div>
     </div>
 </div>

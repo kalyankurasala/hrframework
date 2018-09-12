@@ -187,10 +187,10 @@
             <div class="box">
                 <!-- /.box-header -->
                 <div class="box-body table-responsive">
-                    <table id="example2" class="table table-bordered table-hover">
+                    <table id="example2" class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr class="tr-grid-header">
-                                <th>Application No.</th>
+                                <th>APL No.</th>
                                 <th>Applicant Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
@@ -198,10 +198,11 @@
                                 <th>Recruiter</th>
                                 <th style="text-align: center">Exp</th>
                                 <th>IQ</th>
-                                <th>Process</th>
+                                <th style="text-align: center">ATS</th>
                                 <!-- <th style="text-align: center">Profile</th> -->
 
                                 <!-- <th style="text-align: center">ATS</th> -->
+                                <th style="text-align: center;">Status</th>
                                 <th style="text-align: center;">Actions</th>
 
 
@@ -215,7 +216,7 @@
                         <tbody>
                             <tr *ngFor="let applicant of tableList">
                                 <td>{{applicant.intApplicantId}}</td>
-                                <td>{{applicant.vcName}}</td>
+                                <td><a data-toggle="modal" (click)="fnviewModalModal(1)" style="cursor: pointer;">{{applicant.vcName}}</a></td>
                                 <td>{{applicant.vcEmail}}</td>
                                 <td>{{applicant.vcPhone}}</td>
                                 <td>{{applicant.vcSkills}}</td>
@@ -249,6 +250,7 @@
                                         <i class="glyphicon glyphicon-file"></i>
                                     </a>
                                 </td> -->
+                                <td style="text-align:center;">Selected</td>
                                 <td style="text-align: center">
                                     <!-- <a style="margin-right: 10px; cursor: pointer; vertical-align: text-bottom;" title="send mail">
                                         <i class="fa fa-envelope"></i>

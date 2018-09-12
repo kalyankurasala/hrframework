@@ -27,6 +27,28 @@
     color: #555555;
 } */
 
+.nav>li>a {
+    border-radius: 5%;
+    padding: 8px 25px;
+    background: #7b7b7b;
+    border-color: #444d58;
+    box-shadow: 7px 6px 25px #7b7b7bee;
+    margin-right: 15px;
+    border-bottom: 5px solid transparent;
+    color: #eee;
+    font-size: 15px;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    background: #55616f;
+    border-bottom: 5px solid #108fff;
+}
+
+.nav>li.active>a {
+    background: #428bca;
+    border-bottom: 5px solid #55616f;
+}
+
 thead{
     background: #428bca;
     color: #fff;
